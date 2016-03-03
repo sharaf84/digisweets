@@ -3,6 +3,7 @@
 use yii\db\Migration;
 
 class m160302_154542_init_schema extends Migration {
+    
 
     public function up() {
         $this->execute("-- phpMyAdmin SQL Dump
