@@ -27,6 +27,7 @@ use Yii;
  */
 class Product extends \common\models\base\Base
 {
+    const TARGET = 0;
     /**
      * @inheritdoc
      */
@@ -41,13 +42,17 @@ class Product extends \common\models\base\Base
     public function rules()
     {
         return [
-            [['category_id', 'target', 'qty', 'sold', 'featured', 'sort', 'status'], 'integer'],
-            [['code', 'brief', 'description', 'body'], 'required'],
-            [['price'], 'number'],
+            [['target'], 'default', 'value' => static::TARGET],
+            [['code', 'target', 'category_id', 'qty', 'price'], 'required'],
+            [['category_id', 'target', 'qty', 'featured', 'sort', 'status'], 'integer'],
+            [['slug'], 'match', 'pattern' => static::SLUG_PATTERN],
+            [['slug'], 'unique'],
+            [['price', 'sold'], 'number'],
+            [['price', 'featured', 'qty'], 'default', 'value' => 0],
             [['brief', 'description', 'body'], 'string'],
-            [['created', 'updated'], 'safe'],
             [['code'], 'string', 'max' => 32],
-            [['title', 'slug'], 'string', 'max' => 255]
+            [['title', 'slug'], 'string', 'max' => 255],
+            [['created', 'updated'], 'safe']
         ];
     }
 
@@ -75,5 +80,42 @@ class Product extends \common\models\base\Base
             'created' => Yii::t('app', 'Created'),
             'updated' => Yii::t('app', 'Updated'),
         ];
+    }
+    
+     /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getCategory() {
+        return $this->hasOne(Category::className(), ['id' => 'category_id']);
+    }
+    
+    public function behaviors() {
+        return array_merge_recursive(parent::behaviors(), [
+            'SluggableBehavior' => [
+                'class' => \yii\behaviors\SluggableBehavior::className(),
+                'attribute' => 'title',
+                'slugAttribute' => 'slug',
+                'immutable' => true,
+                'ensureUnique' => true,
+            //'uniqueValidator' => ['targetAttribute' => ['slug', 'type']]
+            ],
+            'Sortable' => [
+                'class' => \digi\sortable\behaviors\Sortable::className(),
+                'query' => static::find(),
+                'orderAttribute' => 'sort'
+            ],
+        ]);
+    }
+    
+    /**
+     * @return bool true if $qty in stock
+     */
+    public function inStock($qty = 1) {
+        return $this->qty >= $qty;
+    }
+    
+    public static function find() {
+        //Set default condition
+        return (new query\Product(get_called_class()))->andWhere(static::TARGET ? ['target' => static::TARGET] : null);
     }
 }

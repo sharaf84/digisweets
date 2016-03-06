@@ -1,6 +1,7 @@
 <?php
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 use yii\widgets\Pjax;
 use digi\metronic\grid\GridView;
 use digi\metronic\widgets\Breadcrumbs;
@@ -9,7 +10,7 @@ use digi\metronic\widgets\Breadcrumbs;
 /* @var $searchModel common\models\custom\search\Product */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Products';
+$this->title = ucfirst($this->context->id);
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
@@ -34,7 +35,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 </button>
                 <ul class="dropdown-menu pull-right" role="menu">
                     <li>
-                        <?= Html::a('Create Product', ['create'], ['class' => '']) ?>
+                        <?= Html::a('Create '.ucfirst($this->context->id), ['create'], ['class' => '']) ?>
                     </li>
                 </ul>
             </div>
@@ -72,30 +73,46 @@ $this->params['breadcrumbs'][] = $this->title;
                         'dataProvider' => $dataProvider,
                         'filterModel' => $searchModel,
         'columns' => [
-                        ['class' => 'yii\grid\SerialColumn'],
+            [
+                'class' => \digi\sortable\grid\Column::className(),
+                'sortUrl' => Url::to(['sort']),
+                'sortModel' => '\common\models\custom\Product',
+                'sortAttr' => 'sort',
+            ],
+            ['class' => 'yii\grid\SerialColumn'],
 
-                                    'id',
-            'category_id',
-            'target',
+            'id',
+            'category.name:text:Category',
+            //'target',
             'code',
             'title',
             // 'slug',
-            // 'price',
-            // 'qty',
+             'price',
+             'qty',
             // 'sold',
             // 'brief:ntext',
             // 'description:ntext',
             // 'body:ntext',
-            // 'featured',
+            [
+                'attribute' => 'featured',
+                'filter' => [0 => 'No', 1 => 'Yes'],
+                'format' => 'html',
+                'value' => function ($model, $key, $index, $column) {
+                    return $model->featured ? '<span class="badge badge-success"> Yes </span>' : '<span class="badge badge-danger"> No </span>';
+                    },
+                ],
             // 'sort',
             // 'status',
             // 'created',
             // 'updated',
 
-                        ['class' => 'digi\metronic\grid\ActionColumn'],
-                        ],
-                        ]); ?>
-                        <?php  Pjax::end();?>
+                [
+                    'class' => 'digi\metronic\grid\ActionColumn',
+                    'template' => '{view} {update} {delete} {media}'
+                ],
+                ],
+            ]); ?>
+            <?php  Pjax::end();?>
                     
                 </div>
             </div>

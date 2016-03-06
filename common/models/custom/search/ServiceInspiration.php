@@ -9,7 +9,7 @@ use yii\data\ActiveDataProvider;
 /**
  * Content represents the model behind the search form about `common\models\base\Content`.
  */
-class Article extends \common\models\custom\Article {
+class ServiceInspiration extends \common\models\custom\ServiceInspiration {
 
     /**
      * @inheritdoc

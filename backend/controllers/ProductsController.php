@@ -13,6 +13,13 @@ use yii\web\NotFoundHttpException;
  */
 class ProductsController extends BaseController
 {
+    /**
+     * @var string used to find the view file if the child class doesn't has its own one.   
+     */
+    public $baseViewPath = '/products';
+    public $model = '\common\models\custom\Product';
+    public $searchModel = '\common\models\custom\search\Product';
+
 
     /**
      * Lists all Product models.
@@ -20,7 +27,7 @@ class ProductsController extends BaseController
      */
     public function actionIndex()
     {
-        $searchModel = new ProductSearch();
+        $searchModel = new $this->searchModel;
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -48,7 +55,7 @@ class ProductsController extends BaseController
      */
     public function actionCreate()
     {
-        $model = new Product();
+        $model = new $this->model;
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -102,7 +109,8 @@ class ProductsController extends BaseController
      */
     protected function findModel($id)
     {
-        if (($model = Product::findOne($id)) !== null) {
+        $model = $this->model;
+        if (($model = $model::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

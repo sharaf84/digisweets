@@ -6,7 +6,7 @@ use yii\helpers\Url;
 
 class Category extends \common\models\base\Tree {
 
-    const ROOT = 1;
+    const ROOT = 3;
     
     /**
      * @inheritdoc

@@ -4,6 +4,6 @@ namespace common\models\custom;
 
 class City extends \common\models\base\Tree {
 
-    const ROOT = 5;
+    const ROOT = 2;
 
 }

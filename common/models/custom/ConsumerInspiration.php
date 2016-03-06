@@ -4,9 +4,9 @@ namespace common\models\custom;
 
 use yii\helpers\Url;
 
-class Article extends \common\models\base\Content {
+class ConsumerInspiration extends \common\models\base\Content {
     
-    const TYPE = 2;
+    const TYPE = 4;
     
     /**
      * @inheritdoc
