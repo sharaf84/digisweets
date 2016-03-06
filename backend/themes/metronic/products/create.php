@@ -2,12 +2,11 @@
 
 use yii\helpers\Html;
 
-
 /* @var $this yii\web\View */
 /* @var $model common\models\custom\Product */
 
-$this->title = 'Create Product';
-$this->params['breadcrumbs'][] = ['label' => 'Products', 'url' => ['index']];
+$this->title = 'Create ' . ucfirst($this->context->id);
+$this->params['breadcrumbs'][] = ['label' => ucfirst($this->context->id), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 

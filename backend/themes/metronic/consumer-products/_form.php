@@ -41,24 +41,36 @@ use digi\metronic\widgets\ActiveForm;
                 ->widget(\webvimark\behaviors\multilanguage\input_widget\MultiLanguageActiveField::className(), ['inputType' => 'textArea'])
         ?>
     </div>
+<!--
+    <= $form->field($model, 'featured')->checkbox() ?>
 
-    <?= $form->field($model, 'featured')->checkbox() ?>
+    <= $form->field($model, 'sort')->textInput() ?>
 
-    <?= $form->field($model, 'sort')->textInput() ?>
+    <= $form->field($model, 'status')->textInput() ?>
 
-    <?= $form->field($model, 'status')->textInput() ?>
+    <= $form->field($model, 'created')->textInput() ?>
 
-    <?= $form->field($model, 'created')->textInput() ?>
+    <= $form->field($model, 'updated')->textInput() ?>
+    -->
+    <div class="parentFields">
+        <h3 class="form-section">SEO:  <small>Meta Tags</small></h3>
 
-    <?= $form->field($model, 'updated')->textInput() ?>
+        <?=
+        digi\metaTags\MetaTags::widget([
+            'model' => $model,
+            'form' => $form,
+            'multiLanguage' => true,
+        ])
+        ?>
+    </div>
 
 
 </div>
 <div class="form-actions">
     <div class="row">
         <div class="col-md-offset-3 col-md-9">
-<?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => 'btn green']) ?>
-<?= Html::resetButton('Reset', ['class' => 'btn default']) ?>
+            <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Create') : Yii::t('app', 'Update'), ['class' => 'btn green']) ?>
+            <?= Html::resetButton(Yii::t('app', 'Reset'), ['class' => 'btn default']) ?>
         </div>
     </div>
 </div>
