@@ -28,12 +28,6 @@ return [
             'class' => 'kartik\tree\Module',
         // other module settings, refer detailed documentation
         ],
-        'comment' => [
-            'class' => 'yii2mod\comments\Module',
-//            'controllerMap' => [
-//                'manage' => 'yii2mod\comments\controllers\ManageController'
-//            ]
-        ],
     ],
     'components' => [
         'request' => [
@@ -102,6 +96,7 @@ return [
         'allowActions' => [
             //'rbac/*', // add or remove allowed actions to this list
             'site/login',
+            'site/logout',
             'site/analytics',
         ]
     ],

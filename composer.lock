@@ -5,6 +5,7 @@
         "This file is @generated automatically"
     ],
     "hash": "3512e149fb05378f960c68ddfc7b9e9e",
+    "content-hash": "28110c7ce512650491a5245247dc8df3",
     "packages": [
         {
             "name": "2amigos/yii2-ckeditor-widget",
@@ -67,16 +68,16 @@
         },
         {
             "name": "2amigos/yii2-file-upload-widget",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/2amigos/yii2-file-upload-widget.git",
-                "reference": "2ecf63e5f47e429e95ab598391399e0ed03e716f"
+                "reference": "8e68ff0967ae46ca3670ef706c7ade187c55087b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/2amigos/yii2-file-upload-widget/zipball/2ecf63e5f47e429e95ab598391399e0ed03e716f",
-                "reference": "2ecf63e5f47e429e95ab598391399e0ed03e716f",
+                "url": "https://api.github.com/repos/2amigos/yii2-file-upload-widget/zipball/8e68ff0967ae46ca3670ef706c7ade187c55087b",
+                "reference": "8e68ff0967ae46ca3670ef706c7ade187c55087b",
                 "shasum": ""
             },
             "require": {
@@ -130,7 +131,7 @@
                 "yii 2",
                 "yii2"
             ],
-            "time": "2015-04-14 19:11:24"
+            "time": "2016-03-04 18:45:47"
         },
         {
             "name": "2amigos/yii2-gallery-widget",
