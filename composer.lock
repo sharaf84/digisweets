@@ -4,12 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-<<<<<<< HEAD
-    "hash": "3512e149fb05378f960c68ddfc7b9e9e",
-    "content-hash": "28110c7ce512650491a5245247dc8df3",
-=======
-    "hash": "55a2a3acd82cf3f51c45e75cfd8009b1",
->>>>>>> dcdefe0eaeaa031f5e004b0fe02a3ec8ef368017
+    "hash": "6d6ac623d8f3208b29a4269b55f1238c",
+    "content-hash": "8ad4b88a9dcfc896bd888ead7a0502fc",
     "packages": [
         {
             "name": "2amigos/yii2-ckeditor-widget",
@@ -72,18 +68,6 @@
         },
         {
             "name": "2amigos/yii2-file-upload-widget",
-<<<<<<< HEAD
-            "version": "1.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/2amigos/yii2-file-upload-widget.git",
-                "reference": "8e68ff0967ae46ca3670ef706c7ade187c55087b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/2amigos/yii2-file-upload-widget/zipball/8e68ff0967ae46ca3670ef706c7ade187c55087b",
-                "reference": "8e68ff0967ae46ca3670ef706c7ade187c55087b",
-=======
             "version": "1.0.4",
             "source": {
                 "type": "git",
@@ -94,7 +78,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/2amigos/yii2-file-upload-widget/zipball/b8558141a4f340337e9f55e88880872cacc8e44d",
                 "reference": "b8558141a4f340337e9f55e88880872cacc8e44d",
->>>>>>> dcdefe0eaeaa031f5e004b0fe02a3ec8ef368017
                 "shasum": ""
             },
             "require": {
@@ -148,11 +131,7 @@
                 "yii 2",
                 "yii2"
             ],
-<<<<<<< HEAD
-            "time": "2016-03-04 18:45:47"
-=======
             "time": "2016-03-07 17:25:38"
->>>>>>> dcdefe0eaeaa031f5e004b0fe02a3ec8ef368017
         },
         {
             "name": "2amigos/yii2-gallery-widget",
@@ -233,16 +212,16 @@
         },
         {
             "name": "bower-asset/blueimp-file-upload",
-            "version": "9.12.1",
+            "version": "9.9.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/blueimp/jQuery-File-Upload.git",
-                "reference": "098b507770581d2c8b037fa0a747ff02eb45a329"
+                "reference": "ce33e8915c4e4b3e7930c9ed0ae45cf132944a88"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/blueimp/jQuery-File-Upload/zipball/098b507770581d2c8b037fa0a747ff02eb45a329",
-                "reference": "098b507770581d2c8b037fa0a747ff02eb45a329",
+                "url": "https://api.github.com/repos/blueimp/jQuery-File-Upload/zipball/ce33e8915c4e4b3e7930c9ed0ae45cf132944a88",
+                "reference": "ce33e8915c4e4b3e7930c9ed0ae45cf132944a88",
                 "shasum": ""
             },
             "require": {
@@ -254,7 +233,23 @@
             "type": "bower-asset-library",
             "extra": {
                 "bower-asset-main": [
-                    "js/jquery.fileupload.js"
+                    "css/jquery.fileupload.css",
+                    "css/jquery.fileupload-ui.css",
+                    "css/jquery.fileupload-noscript.css",
+                    "css/jquery.fileupload-ui-noscript.css",
+                    "js/cors/jquery.postmessage-transport.js",
+                    "js/cors/jquery.xdr-transport.js",
+                    "js/vendor/jquery.ui.widget.js",
+                    "js/jquery.fileupload.js",
+                    "js/jquery.fileupload-process.js",
+                    "js/jquery.fileupload-validate.js",
+                    "js/jquery.fileupload-image.js",
+                    "js/jquery.fileupload-audio.js",
+                    "js/jquery.fileupload-video.js",
+                    "js/jquery.fileupload-ui.js",
+                    "js/jquery.fileupload-jquery-ui.js",
+                    "js/jquery.fileupload-angular.js",
+                    "js/jquery.iframe-transport.js"
                 ],
                 "bower-asset-ignore": [
                     "/*.*",
@@ -268,10 +263,7 @@
                     "test"
                 ]
             },
-            "license": [
-                "MIT"
-            ],
-            "description": "File Upload widget with multiple file selection, drag&amp;drop support, progress bar, validation and preview images.",
+            "description": "File Upload widget with multiple file selection, drag&amp;drop support, progress bar, validation and preview images, audio and video for jQuery. Supports cross-domain, chunked and resumable file uploads. Works with any server-side platform (Google App Engine, PHP, Python, Ruby on Rails, Java, etc.) that supports standard HTML form file uploads.",
             "keywords": [
                 "bootstrap",
                 "chunk",
@@ -613,16 +605,16 @@
         },
         {
             "name": "bower-asset/yii2-pjax",
-            "version": "v2.0.6",
+            "version": "v2.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/jquery-pjax.git",
-                "reference": "60728da6ade5879e807a49ce59ef9a72039b8978"
+                "reference": "6818718408086db6bdcf33649cecb86b6b4f9b67"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/jquery-pjax/zipball/60728da6ade5879e807a49ce59ef9a72039b8978",
-                "reference": "60728da6ade5879e807a49ce59ef9a72039b8978",
+                "url": "https://api.github.com/repos/yiisoft/jquery-pjax/zipball/6818718408086db6bdcf33649cecb86b6b4f9b67",
+                "reference": "6818718408086db6bdcf33649cecb86b6b4f9b67",
                 "shasum": ""
             },
             "require": {
@@ -635,7 +627,6 @@
                     ".travis.yml",
                     "Gemfile",
                     "Gemfile.lock",
-                    "CONTRIBUTING.md",
                     "vendor/",
                     "script/",
                     "test/"
