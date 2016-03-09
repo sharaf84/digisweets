@@ -6,7 +6,7 @@ class m160309_112529_manage_authclient_items extends Migration
 {
     public function up()
     {
-        $this>execute("--
+        $this->execute("--
 -- Dumping data for table `auth_item`
 --
 
