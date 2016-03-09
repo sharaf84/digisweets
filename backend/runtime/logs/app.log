@@ -1,0 +1,507 @@
+2016-03-09 13:32:35 [127.0.0.1][3][qlc2qq3p4dvviungastv71sat6][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message 'You are not allowed to perform this action.' in C:\xampp\htdocs\local.dreem.com\public_html\vendor\mdmsoft\yii2-admin\components\AccessControl.php:96
+Stack trace:
+#0 C:\xampp\htdocs\local.dreem.com\public_html\vendor\mdmsoft\yii2-admin\components\AccessControl.php(81): mdm\admin\components\AccessControl->denyAccess(Object(digi\web\User))
+#1 C:\xampp\htdocs\local.dreem.com\public_html\vendor\yiisoft\yii2\base\ActionFilter.php(71): mdm\admin\components\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\xampp\htdocs\local.dreem.com\public_html\vendor\yiisoft\yii2\base\Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\xampp\htdocs\local.dreem.com\public_html\vendor\yiisoft\yii2\base\Module.php(606): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\xampp\htdocs\local.dreem.com\public_html\vendor\yiisoft\yii2\base\Controller.php(142): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#6 C:\xampp\htdocs\local.dreem.com\public_html\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('', Array)
+#7 C:\xampp\htdocs\local.dreem.com\public_html\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#8 C:\xampp\htdocs\local.dreem.com\public_html\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\xampp\htdocs\local.dreem.com\public_html\backend\web\index.php(18): yii\base\Application->run()
+#10 {main}
+2016-03-09 13:32:35 [127.0.0.1][3][qlc2qq3p4dvviungastv71sat6][info][application] $_COOKIE = [
+    '_dreem' => '940ca72457ae2f0b6629388b56aa5bd3bf8c1500fd02a3b6ad2ae049374e6929a:2:{i:0;s:6:\"_dreem\";i:1;s:48:\"[\"3\",\"Vri48kKHWj7BAiMhLxMj7dx70FLaNrkh\",2592000]\";}'
+    'PHPSESSID' => 'qlc2qq3p4dvviungastv71sat6'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/admin/'
+    '__id' => '3'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'local.dreem.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36'
+    'HTTP_REFERER' => 'http://local.dreem.com/admin/site/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_dreem=940ca72457ae2f0b6629388b56aa5bd3bf8c1500fd02a3b6ad2ae049374e6929a%3A2%3A%7Bi%3A0%3Bs%3A6%3A%22_dreem%22%3Bi%3A1%3Bs%3A48%3A%22%5B%223%22%2C%22Vri48kKHWj7BAiMhLxMj7dx70FLaNrkh%22%2C2592000%5D%22%3B%7D; PHPSESSID=qlc2qq3p4dvviungastv71sat6'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Users\\Nourhan Fathy\\AppData\\Roaming\\npm;C:\\Program Files (x86)\\BlackBerry\\BB10 WebWorks SDK 2.2.0.15;C:\\Program Files (x86)\\BlackBerry\\BB10 WebWorks SDK 2.2.0.15\\cordova-blackberry\\bin\\dependencies\\bb-tools\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.15 Server at local.dreem.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.15'
+    'SERVER_NAME' => 'local.dreem.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/local.dreem.com/public_html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/local.dreem.com/public_html'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/local.dreem.com/public_html/backend/web/index.php'
+    'REMOTE_PORT' => '53689'
+    'REDIRECT_URL' => 'http://local.dreem.com/admin/'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1457523155.719
+    'REQUEST_TIME' => 1457523155
+]
+2016-03-09 13:32:36 [127.0.0.1][3][qlc2qq3p4dvviungastv71sat6][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message 'You are not allowed to perform this action.' in C:\xampp\htdocs\local.dreem.com\public_html\vendor\mdmsoft\yii2-admin\components\AccessControl.php:96
+Stack trace:
+#0 C:\xampp\htdocs\local.dreem.com\public_html\vendor\mdmsoft\yii2-admin\components\AccessControl.php(81): mdm\admin\components\AccessControl->denyAccess(Object(digi\web\User))
+#1 C:\xampp\htdocs\local.dreem.com\public_html\vendor\yiisoft\yii2\base\ActionFilter.php(71): mdm\admin\components\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\xampp\htdocs\local.dreem.com\public_html\vendor\yiisoft\yii2\base\Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\xampp\htdocs\local.dreem.com\public_html\vendor\yiisoft\yii2\base\Module.php(606): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\xampp\htdocs\local.dreem.com\public_html\vendor\yiisoft\yii2\base\Controller.php(142): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#6 C:\xampp\htdocs\local.dreem.com\public_html\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('toolbar', Array)
+#7 C:\xampp\htdocs\local.dreem.com\public_html\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('debug/default/t...', Array)
+#8 C:\xampp\htdocs\local.dreem.com\public_html\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\xampp\htdocs\local.dreem.com\public_html\backend\web\index.php(18): yii\base\Application->run()
+#10 {main}
+2016-03-09 13:32:36 [127.0.0.1][3][qlc2qq3p4dvviungastv71sat6][info][application] $_GET = [
+    'tag' => '56e009d3ba558'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'qlc2qq3p4dvviungastv71sat6'
+    '_dreem' => '940ca72457ae2f0b6629388b56aa5bd3bf8c1500fd02a3b6ad2ae049374e6929a:2:{i:0;s:6:\"_dreem\";i:1;s:48:\"[\"3\",\"Vri48kKHWj7BAiMhLxMj7dx70FLaNrkh\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/admin/'
+    '__id' => '3'
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'local.dreem.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36'
+    'HTTP_REFERER' => 'http://local.dreem.com/admin/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=qlc2qq3p4dvviungastv71sat6; _dreem=940ca72457ae2f0b6629388b56aa5bd3bf8c1500fd02a3b6ad2ae049374e6929a%3A2%3A%7Bi%3A0%3Bs%3A6%3A%22_dreem%22%3Bi%3A1%3Bs%3A48%3A%22%5B%223%22%2C%22Vri48kKHWj7BAiMhLxMj7dx70FLaNrkh%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Users\\Nourhan Fathy\\AppData\\Roaming\\npm;C:\\Program Files (x86)\\BlackBerry\\BB10 WebWorks SDK 2.2.0.15;C:\\Program Files (x86)\\BlackBerry\\BB10 WebWorks SDK 2.2.0.15\\cordova-blackberry\\bin\\dependencies\\bb-tools\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.15 Server at local.dreem.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.15'
+    'SERVER_NAME' => 'local.dreem.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/local.dreem.com/public_html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/local.dreem.com/public_html'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/local.dreem.com/public_html/backend/web/index.php'
+    'REMOTE_PORT' => '53689'
+    'REDIRECT_QUERY_STRING' => 'tag=56e009d3ba558'
+    'REDIRECT_URL' => 'http://local.dreem.com/backend/web/debug/default/toolbar?tag=56e009d3ba558'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'tag=56e009d3ba558'
+    'REQUEST_URI' => '/admin/debug/default/toolbar?tag=56e009d3ba558'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1457523156.237
+    'REQUEST_TIME' => 1457523156
+]
+2016-03-09 13:33:03 [127.0.0.1][3][qlc2qq3p4dvviungastv71sat6][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message 'You are not allowed to perform this action.' in C:\xampp\htdocs\local.dreem.com\public_html\vendor\mdmsoft\yii2-admin\components\AccessControl.php:96
+Stack trace:
+#0 C:\xampp\htdocs\local.dreem.com\public_html\vendor\mdmsoft\yii2-admin\components\AccessControl.php(81): mdm\admin\components\AccessControl->denyAccess(Object(digi\web\User))
+#1 C:\xampp\htdocs\local.dreem.com\public_html\vendor\yiisoft\yii2\base\ActionFilter.php(71): mdm\admin\components\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\xampp\htdocs\local.dreem.com\public_html\vendor\yiisoft\yii2\base\Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\xampp\htdocs\local.dreem.com\public_html\vendor\yiisoft\yii2\base\Module.php(606): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\xampp\htdocs\local.dreem.com\public_html\vendor\yiisoft\yii2\base\Controller.php(142): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#6 C:\xampp\htdocs\local.dreem.com\public_html\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('', Array)
+#7 C:\xampp\htdocs\local.dreem.com\public_html\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('rbac/assignment', Array)
+#8 C:\xampp\htdocs\local.dreem.com\public_html\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\xampp\htdocs\local.dreem.com\public_html\backend\web\index.php(18): yii\base\Application->run()
+#10 {main}
+2016-03-09 13:33:03 [127.0.0.1][3][qlc2qq3p4dvviungastv71sat6][info][application] $_COOKIE = [
+    'PHPSESSID' => 'qlc2qq3p4dvviungastv71sat6'
+    '_dreem' => '940ca72457ae2f0b6629388b56aa5bd3bf8c1500fd02a3b6ad2ae049374e6929a:2:{i:0;s:6:\"_dreem\";i:1;s:48:\"[\"3\",\"Vri48kKHWj7BAiMhLxMj7dx70FLaNrkh\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/admin/'
+    '__id' => '3'
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'local.dreem.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36'
+    'HTTP_REFERER' => 'http://local.dreem.com/admin/rbac/role'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=qlc2qq3p4dvviungastv71sat6; _dreem=940ca72457ae2f0b6629388b56aa5bd3bf8c1500fd02a3b6ad2ae049374e6929a%3A2%3A%7Bi%3A0%3Bs%3A6%3A%22_dreem%22%3Bi%3A1%3Bs%3A48%3A%22%5B%223%22%2C%22Vri48kKHWj7BAiMhLxMj7dx70FLaNrkh%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Users\\Nourhan Fathy\\AppData\\Roaming\\npm;C:\\Program Files (x86)\\BlackBerry\\BB10 WebWorks SDK 2.2.0.15;C:\\Program Files (x86)\\BlackBerry\\BB10 WebWorks SDK 2.2.0.15\\cordova-blackberry\\bin\\dependencies\\bb-tools\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.15 Server at local.dreem.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.15'
+    'SERVER_NAME' => 'local.dreem.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/local.dreem.com/public_html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/local.dreem.com/public_html'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/local.dreem.com/public_html/backend/web/index.php'
+    'REMOTE_PORT' => '53697'
+    'REDIRECT_URL' => 'http://local.dreem.com/backend/web/rbac/assignment'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/rbac/assignment'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1457523183.46
+    'REQUEST_TIME' => 1457523183
+]
+2016-03-09 13:33:04 [127.0.0.1][3][qlc2qq3p4dvviungastv71sat6][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message 'You are not allowed to perform this action.' in C:\xampp\htdocs\local.dreem.com\public_html\vendor\mdmsoft\yii2-admin\components\AccessControl.php:96
+Stack trace:
+#0 C:\xampp\htdocs\local.dreem.com\public_html\vendor\mdmsoft\yii2-admin\components\AccessControl.php(81): mdm\admin\components\AccessControl->denyAccess(Object(digi\web\User))
+#1 C:\xampp\htdocs\local.dreem.com\public_html\vendor\yiisoft\yii2\base\ActionFilter.php(71): mdm\admin\components\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\xampp\htdocs\local.dreem.com\public_html\vendor\yiisoft\yii2\base\Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\xampp\htdocs\local.dreem.com\public_html\vendor\yiisoft\yii2\base\Module.php(606): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\xampp\htdocs\local.dreem.com\public_html\vendor\yiisoft\yii2\base\Controller.php(142): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#6 C:\xampp\htdocs\local.dreem.com\public_html\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('toolbar', Array)
+#7 C:\xampp\htdocs\local.dreem.com\public_html\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('debug/default/t...', Array)
+#8 C:\xampp\htdocs\local.dreem.com\public_html\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\xampp\htdocs\local.dreem.com\public_html\backend\web\index.php(18): yii\base\Application->run()
+#10 {main}
+2016-03-09 13:33:04 [127.0.0.1][3][qlc2qq3p4dvviungastv71sat6][info][application] $_GET = [
+    'tag' => '56e009ef7c0a0'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'qlc2qq3p4dvviungastv71sat6'
+    '_dreem' => '940ca72457ae2f0b6629388b56aa5bd3bf8c1500fd02a3b6ad2ae049374e6929a:2:{i:0;s:6:\"_dreem\";i:1;s:48:\"[\"3\",\"Vri48kKHWj7BAiMhLxMj7dx70FLaNrkh\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/admin/'
+    '__id' => '3'
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'local.dreem.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36'
+    'HTTP_REFERER' => 'http://local.dreem.com/admin/rbac/assignment'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=qlc2qq3p4dvviungastv71sat6; _dreem=940ca72457ae2f0b6629388b56aa5bd3bf8c1500fd02a3b6ad2ae049374e6929a%3A2%3A%7Bi%3A0%3Bs%3A6%3A%22_dreem%22%3Bi%3A1%3Bs%3A48%3A%22%5B%223%22%2C%22Vri48kKHWj7BAiMhLxMj7dx70FLaNrkh%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Users\\Nourhan Fathy\\AppData\\Roaming\\npm;C:\\Program Files (x86)\\BlackBerry\\BB10 WebWorks SDK 2.2.0.15;C:\\Program Files (x86)\\BlackBerry\\BB10 WebWorks SDK 2.2.0.15\\cordova-blackberry\\bin\\dependencies\\bb-tools\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.15 Server at local.dreem.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.15'
+    'SERVER_NAME' => 'local.dreem.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/local.dreem.com/public_html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/local.dreem.com/public_html'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/local.dreem.com/public_html/backend/web/index.php'
+    'REMOTE_PORT' => '53697'
+    'REDIRECT_QUERY_STRING' => 'tag=56e009ef7c0a0'
+    'REDIRECT_URL' => 'http://local.dreem.com/backend/web/debug/default/toolbar?tag=56e009ef7c0a0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'tag=56e009ef7c0a0'
+    'REQUEST_URI' => '/admin/debug/default/toolbar?tag=56e009ef7c0a0'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1457523184.056
+    'REQUEST_TIME' => 1457523184
+]
+2016-03-09 13:33:39 [127.0.0.1][4][p8dlg5co5t4237dvgbl7nbfp74][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message 'You are not allowed to perform this action.' in C:\xampp\htdocs\local.dreem.com\public_html\vendor\mdmsoft\yii2-admin\components\AccessControl.php:96
+Stack trace:
+#0 C:\xampp\htdocs\local.dreem.com\public_html\vendor\mdmsoft\yii2-admin\components\AccessControl.php(81): mdm\admin\components\AccessControl->denyAccess(Object(digi\web\User))
+#1 C:\xampp\htdocs\local.dreem.com\public_html\vendor\yiisoft\yii2\base\ActionFilter.php(71): mdm\admin\components\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\xampp\htdocs\local.dreem.com\public_html\vendor\yiisoft\yii2\base\Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\xampp\htdocs\local.dreem.com\public_html\vendor\yiisoft\yii2\base\Module.php(606): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\xampp\htdocs\local.dreem.com\public_html\vendor\yiisoft\yii2\base\Controller.php(142): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#6 C:\xampp\htdocs\local.dreem.com\public_html\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('', Array)
+#7 C:\xampp\htdocs\local.dreem.com\public_html\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#8 C:\xampp\htdocs\local.dreem.com\public_html\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\xampp\htdocs\local.dreem.com\public_html\backend\web\index.php(18): yii\base\Application->run()
+#10 {main}
+2016-03-09 13:33:39 [127.0.0.1][4][p8dlg5co5t4237dvgbl7nbfp74][info][application] $_COOKIE = [
+    '_dreem' => 'f74a4d08a259988cb9ed755451addada9c92b7fd2fc960f6e1d26a78f6d88974a:2:{i:0;s:6:\"_dreem\";i:1;s:48:\"[\"4\",\"wCqUX_BuM2y2gCJzbowml4qpNKLTcRhU\",2592000]\";}'
+    'PHPSESSID' => 'p8dlg5co5t4237dvgbl7nbfp74'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/admin'
+    '__id' => '4'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'local.dreem.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36'
+    'HTTP_REFERER' => 'http://local.dreem.com/admin/site/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_dreem=f74a4d08a259988cb9ed755451addada9c92b7fd2fc960f6e1d26a78f6d88974a%3A2%3A%7Bi%3A0%3Bs%3A6%3A%22_dreem%22%3Bi%3A1%3Bs%3A48%3A%22%5B%224%22%2C%22wCqUX_BuM2y2gCJzbowml4qpNKLTcRhU%22%2C2592000%5D%22%3B%7D; PHPSESSID=p8dlg5co5t4237dvgbl7nbfp74'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Users\\Nourhan Fathy\\AppData\\Roaming\\npm;C:\\Program Files (x86)\\BlackBerry\\BB10 WebWorks SDK 2.2.0.15;C:\\Program Files (x86)\\BlackBerry\\BB10 WebWorks SDK 2.2.0.15\\cordova-blackberry\\bin\\dependencies\\bb-tools\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.15 Server at local.dreem.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.15'
+    'SERVER_NAME' => 'local.dreem.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/local.dreem.com/public_html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/local.dreem.com/public_html'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/local.dreem.com/public_html/backend/web/index.php'
+    'REMOTE_PORT' => '53717'
+    'REDIRECT_URL' => 'http://local.dreem.com/admin'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1457523219.753
+    'REQUEST_TIME' => 1457523219
+]
+2016-03-09 13:33:40 [127.0.0.1][4][p8dlg5co5t4237dvgbl7nbfp74][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message 'You are not allowed to perform this action.' in C:\xampp\htdocs\local.dreem.com\public_html\vendor\mdmsoft\yii2-admin\components\AccessControl.php:96
+Stack trace:
+#0 C:\xampp\htdocs\local.dreem.com\public_html\vendor\mdmsoft\yii2-admin\components\AccessControl.php(81): mdm\admin\components\AccessControl->denyAccess(Object(digi\web\User))
+#1 C:\xampp\htdocs\local.dreem.com\public_html\vendor\yiisoft\yii2\base\ActionFilter.php(71): mdm\admin\components\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\xampp\htdocs\local.dreem.com\public_html\vendor\yiisoft\yii2\base\Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\xampp\htdocs\local.dreem.com\public_html\vendor\yiisoft\yii2\base\Module.php(606): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\xampp\htdocs\local.dreem.com\public_html\vendor\yiisoft\yii2\base\Controller.php(142): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#6 C:\xampp\htdocs\local.dreem.com\public_html\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('toolbar', Array)
+#7 C:\xampp\htdocs\local.dreem.com\public_html\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('debug/default/t...', Array)
+#8 C:\xampp\htdocs\local.dreem.com\public_html\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\xampp\htdocs\local.dreem.com\public_html\backend\web\index.php(18): yii\base\Application->run()
+#10 {main}
+2016-03-09 13:33:40 [127.0.0.1][4][p8dlg5co5t4237dvgbl7nbfp74][info][application] $_GET = [
+    'tag' => '56e00a13c291c'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'p8dlg5co5t4237dvgbl7nbfp74'
+    '_dreem' => 'f74a4d08a259988cb9ed755451addada9c92b7fd2fc960f6e1d26a78f6d88974a:2:{i:0;s:6:\"_dreem\";i:1;s:48:\"[\"4\",\"wCqUX_BuM2y2gCJzbowml4qpNKLTcRhU\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/admin'
+    '__id' => '4'
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'local.dreem.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36'
+    'HTTP_REFERER' => 'http://local.dreem.com/admin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=p8dlg5co5t4237dvgbl7nbfp74; _dreem=f74a4d08a259988cb9ed755451addada9c92b7fd2fc960f6e1d26a78f6d88974a%3A2%3A%7Bi%3A0%3Bs%3A6%3A%22_dreem%22%3Bi%3A1%3Bs%3A48%3A%22%5B%224%22%2C%22wCqUX_BuM2y2gCJzbowml4qpNKLTcRhU%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\Users\\Nourhan Fathy\\AppData\\Roaming\\npm;C:\\Program Files (x86)\\BlackBerry\\BB10 WebWorks SDK 2.2.0.15;C:\\Program Files (x86)\\BlackBerry\\BB10 WebWorks SDK 2.2.0.15\\cordova-blackberry\\bin\\dependencies\\bb-tools\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.15 Server at local.dreem.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.15'
+    'SERVER_NAME' => 'local.dreem.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/local.dreem.com/public_html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/local.dreem.com/public_html'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/local.dreem.com/public_html/backend/web/index.php'
+    'REMOTE_PORT' => '53717'
+    'REDIRECT_QUERY_STRING' => 'tag=56e00a13c291c'
+    'REDIRECT_URL' => 'http://local.dreem.com/backend/web/debug/default/toolbar?tag=56e00a13c291c'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'tag=56e00a13c291c'
+    'REQUEST_URI' => '/admin/debug/default/toolbar?tag=56e00a13c291c'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1457523220.209
+    'REQUEST_TIME' => 1457523220
+]
