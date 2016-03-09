@@ -3,14 +3,14 @@
 use yii\helpers\Url;
 use infoweb\analytics\Analytics;
 
-$this->title = 'TSS Dashboard';
+$this->title = Yii::$app->name . ' Dashboard';
 ?>
 <div class="page-content">
    
 
     <!-- BEGIN PAGE HEADER-->
     <h3 class="page-title">
-        TSS <small>dashboard & statistics</small>
+        <?= Yii::$app->name ?> <small>dashboard & statistics</small>
     </h3>
     <div class="page-bar">
         <ul class="page-breadcrumb">

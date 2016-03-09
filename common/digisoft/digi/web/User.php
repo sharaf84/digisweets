@@ -21,4 +21,13 @@ class User extends \yii\web\User {
         $identity->updateAttributes(['last_login' => New \yii\db\Expression('NOW()')]);
     }
 
+    /**
+     * @inheritdoc
+     * 
+     * User with role Asterisk can access any action
+     */
+    public function can($permissionName, $params = [], $allowCaching = true) {
+        return parent::can('Asterisk', $params, $allowCaching) ? true : parent::can($permissionName, $params, $allowCaching);
+    }
+
 }

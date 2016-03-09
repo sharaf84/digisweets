@@ -5,7 +5,9 @@ Yii::setAlias('sharedPath', dirname(dirname(__DIR__)) . '/shared');
 Yii::setAlias('sharedUrl', '/shared');
 
 return [
+    'name' => 'Dreem',
     'language' => 'en',
+    'timezone' => 'Africa/Cairo',
     'aliases' => [
         '@digi' => '@common/digisoft/digi',
         '@digi/metronic' => '@common/digisoft/digi-metronic',

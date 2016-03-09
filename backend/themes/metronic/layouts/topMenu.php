@@ -16,7 +16,7 @@ $test = 0;
             <a href="<?= Url::to(['/categories']) ?>"> Categories </a>
         </li>
 
-            <li <?= ($test == 1 || $test == 0) ? '' : 'style="display:none"}' ?> >
+            <li <?= Yii::$app->user->can('Consumer') ? '' : 'style="display:none"}' ?> >
                 <a href="<?= Url::to(['/consumer-products']) ?>"> Consumer Products </a>
             </li>
             <li <?= ($test == 1 || $test == 0) ? '' : 'style="display:none"}' ?> >
