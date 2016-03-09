@@ -19,30 +19,30 @@ $test = 0;
             <li <?= Yii::$app->user->can('Consumer') ? '' : 'style="display:none"}' ?> >
                 <a href="<?= Url::to(['/consumer-products']) ?>"> Consumer Products </a>
             </li>
-            <li <?= ($test == 1 || $test == 0) ? '' : 'style="display:none"}' ?> >
+            <li <?= Yii::$app->user->can('Consumer') ? '' : 'style="display:none"}' ?> >
                 <a href="<?= Url::to(['/consumer-inspirations']) ?>"> Consumer Inspirations </a>
             </li>
-            <li <?= ($test == 1 || $test == 0) ? '' : 'style="display:none"' ?> >
+            <li <?= Yii::$app->user->can('Consumer') ? '' : 'style="display:none"' ?> >
                 <a href="<?= Url::to(['/consumer-articles']) ?>"> Consumer Articles </a>
             </li>
             
-            <li <?= ($test == 2 || $test == 0) ? '' : 'style="display:none"' ?> >
+            <li <?= Yii::$app->user->can('Service') ? '' : 'style="display:none"' ?> >
                 <a href="<?= Url::to(['/service-products']) ?>"> Service Products </a>
             </li>
-            <li <?= ($test == 2 || $test == 0) ? '' : 'style="display:none"' ?> >
+            <li <?= Yii::$app->user->can('Service') ? '' : 'style="display:none"' ?> >
                 <a href="<?= Url::to(['/service-inspirations']) ?>"> Service Inspirations </a>
             </li>
-            <li <?= ($test == 2 || $test == 0) ? '' : 'style="display:none"' ?> >
+            <li <?= Yii::$app->user->can('Service') ? '' : 'style="display:none"' ?> >
                 <a href="<?= Url::to(['/service-articles']) ?>"> Service Articles </a>
             </li>
         
-        <li <?= ($test == 0) ? '' : 'style="display:none"' ?> >
+        <li <?= Yii::$app->user->can('Asterisk') ? '' : 'style="display:none"' ?> >
             <a href="<?= Url::to(['/users']) ?>"> Users </a>
         </li>
-        <li>
+        <li <?= Yii::$app->user->can('Asterisk') ? '' : 'style="display:none"' ?> >
             <a href="<?= Url::to(['/orders']) ?>"> Orders </a>
         </li>
-        <li class="classic-menu-dropdown"  <?= ($test == 0) ? '' : 'style="display:none"' ?> >
+        <li class="classic-menu-dropdown"  <?= Yii::$app->user->can('Asterisk') ? '' : 'style="display:none"' ?> >
             <a data-toggle="dropdown" href="javascript:;">
                 Contents <i class="fa fa-angle-down"></i>
             </a>
