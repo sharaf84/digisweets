@@ -6,7 +6,7 @@ class m160309_112529_manage_authclient_items extends Migration
 {
     public function up()
     {
-        $this>execute("--
+        $this->execute("--
 -- Dumping data for table `auth_item`
 --
 
@@ -17,6 +17,7 @@ INSERT INTO `auth_item` (`name`, `type`, `description`, `rule_name`, `data`, `cr
 ('/service-articles/*', 2, NULL, NULL, NULL, 1457522487, 1457522487),
 ('/service-inspirations/*', 2, NULL, NULL, NULL, 1457522489, 1457522489),
 ('/service-products/*', 2, NULL, NULL, NULL, 1457522492, 1457522492),
+('/media/*', 2, NULL, NULL, NULL, 1457522492, 1457522492),
 ('Consumer', 1, 'access all consumer actions', NULL, NULL, 1457522446, 1457522446),
 ('Service', 1, 'access all food service actions', NULL, NULL, 1457522533, 1457522533);
 --
@@ -27,9 +28,11 @@ INSERT INTO `auth_item_child` (`parent`, `child`) VALUES
 ('Consumer', '/consumer-articles/*'),
 ('Consumer', '/consumer-inspirations/*'),
 ('Consumer', '/consumer-products/*'),
+('Consumer', '/media/*'),
 ('Service', '/service-articles/*'),
 ('Service', '/service-inspirations/*'),
-('Service', '/service-products/*');");
+('Service', '/service-products/*'),
+('Service', '/media/*');");
     }
 
     public function down()
