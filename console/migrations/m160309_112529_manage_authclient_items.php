@@ -32,7 +32,7 @@ INSERT INTO `auth_item_child` (`parent`, `child`) VALUES
 ('Service', '/service-articles/*'),
 ('Service', '/service-inspirations/*'),
 ('Service', '/service-products/*'),
-('Service', '/media/*'),;");
+('Service', '/media/*');");
     }
 
     public function down()
