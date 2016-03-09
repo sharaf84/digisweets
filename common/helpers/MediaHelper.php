@@ -3,7 +3,7 @@
 namespace common\helpers;
 
 use Yii;
-use yii\imagine\Image;
+use digi\imagine\Image;
 use yii\helpers\Html;
 use yii\helpers\FileHelper;
 use yii\helpers\Url;
