@@ -4,12 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-<<<<<<< HEAD
-    "hash": "3512e149fb05378f960c68ddfc7b9e9e",
-    "content-hash": "28110c7ce512650491a5245247dc8df3",
-=======
     "hash": "55a2a3acd82cf3f51c45e75cfd8009b1",
->>>>>>> dcdefe0eaeaa031f5e004b0fe02a3ec8ef368017
+    "content-hash": "8ad4b88a9dcfc896bd888ead7a0502fc",
     "packages": [
         {
             "name": "2amigos/yii2-ckeditor-widget",
@@ -72,18 +68,6 @@
         },
         {
             "name": "2amigos/yii2-file-upload-widget",
-<<<<<<< HEAD
-            "version": "1.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/2amigos/yii2-file-upload-widget.git",
-                "reference": "8e68ff0967ae46ca3670ef706c7ade187c55087b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/2amigos/yii2-file-upload-widget/zipball/8e68ff0967ae46ca3670ef706c7ade187c55087b",
-                "reference": "8e68ff0967ae46ca3670ef706c7ade187c55087b",
-=======
             "version": "1.0.4",
             "source": {
                 "type": "git",
@@ -94,7 +78,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/2amigos/yii2-file-upload-widget/zipball/b8558141a4f340337e9f55e88880872cacc8e44d",
                 "reference": "b8558141a4f340337e9f55e88880872cacc8e44d",
->>>>>>> dcdefe0eaeaa031f5e004b0fe02a3ec8ef368017
                 "shasum": ""
             },
             "require": {
@@ -148,11 +131,7 @@
                 "yii 2",
                 "yii2"
             ],
-<<<<<<< HEAD
-            "time": "2016-03-04 18:45:47"
-=======
             "time": "2016-03-07 17:25:38"
->>>>>>> dcdefe0eaeaa031f5e004b0fe02a3ec8ef368017
         },
         {
             "name": "2amigos/yii2-gallery-widget",
