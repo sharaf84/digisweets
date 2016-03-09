@@ -19,9 +19,6 @@ return [
             'class' => 'kartik\tree\Module',
         // other module settings, refer detailed documentation
         ],
-        'comment' => [
-            'class' => 'yii2mod\comments\Module'
-        ],
         'sitemap' => [
             'class' => 'himiklab\sitemap\Sitemap',
             'models' => [
