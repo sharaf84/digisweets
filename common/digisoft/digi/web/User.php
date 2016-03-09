@@ -27,7 +27,7 @@ class User extends \yii\web\User {
      * User with role Asterisk can access any action
      */
     public function can($permissionName, $params = [], $allowCaching = true) {
-        return parent::can('Asterisk', $params, $allowCaching) ? true : parent::can($permissionName, $params, $allowCaching);
+        return parent::can('Asterisk', $params, $allowCaching) || parent::can($permissionName, $params, $allowCaching);
     }
 
 }
