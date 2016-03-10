@@ -97,7 +97,7 @@ return [
             //'rbac/*', // add or remove allowed actions to this list
             'site/login',
             'site/logout',
-            'site/analytics',
+            //'site/analytics',
         ]
     ],
     'params' => $params,
