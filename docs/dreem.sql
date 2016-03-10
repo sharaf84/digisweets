@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 03, 2016 at 04:39 PM
+-- Generation Time: Mar 06, 2016 at 03:02 PM
 -- Server version: 10.1.9-MariaDB
 -- PHP Version: 5.6.15
 
@@ -230,6 +230,17 @@ CREATE TABLE `base_tree` (
   `updated` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `base_tree`
+--
+
+INSERT INTO `base_tree` (`id`, `root`, `lft`, `rgt`, `lvl`, `name`, `slug`, `link`, `description`, `icon`, `icon_type`, `active`, `selected`, `disabled`, `readonly`, `visible`, `collapsed`, `movable_u`, `movable_d`, `movable_l`, `movable_r`, `removable`, `removable_all`, `created`, `updated`) VALUES
+(1, 1, 1, 2, 0, 'Menu', 'menu', '', '', '', 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, '2016-03-06 10:59:31', '2016-03-06 10:59:31'),
+(2, 2, 1, 2, 0, 'City', 'city', '', '', '', 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, '2016-03-06 10:59:45', '2016-03-06 10:59:45'),
+(3, 3, 1, 6, 0, 'Category', 'category', '', '', '', 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, '2016-03-06 10:59:54', '2016-03-06 10:59:54'),
+(5, 3, 2, 3, 1, 'Spong Cake Mix (Plain)', 'spong-cake-mix-plain', '', '', '', 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, '2016-03-06 11:00:25', '2016-03-06 11:00:25'),
+(6, 3, 4, 5, 1, 'Dona Gel', 'dona-gel', '', '', '', 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, '2016-03-06 11:48:39', '2016-03-06 11:48:39');
+
 -- --------------------------------------------------------
 
 --
@@ -256,7 +267,7 @@ CREATE TABLE `base_user` (
 --
 
 INSERT INTO `base_user` (`id`, `username`, `email`, `password`, `token`, `token_type`, `auth_key`, `sso_key`, `status`, `last_login`, `created`, `updated`) VALUES
-(1, 'sharaf', 'a.sharaf@digitreeinc.com', '$2y$13$ga/hQeBy4AcDcNuijqMaFeDPuAh41/mbyZUuJ5QAQgVO4amkDwNJi', NULL, NULL, 'AMITSMZCAjVVktBlAx4sZDuCAVSZp3H2', NULL, 2, '2016-03-03 12:52:45', NULL, '2015-09-09 12:55:21');
+(1, 'sharaf', 'a.sharaf@digitreeinc.com', '$2y$13$ga/hQeBy4AcDcNuijqMaFeDPuAh41/mbyZUuJ5QAQgVO4amkDwNJi', NULL, NULL, 'AMITSMZCAjVVktBlAx4sZDuCAVSZp3H2', NULL, 2, '2016-03-06 13:35:24', NULL, '2015-09-09 12:55:21');
 
 -- --------------------------------------------------------
 
@@ -316,7 +327,8 @@ INSERT INTO `meta_tags` (`id`, `model`, `model_id`, `title`, `keywords`, `descri
 (2, 'ConsumerArticle', 2, '', '', '', '2016-03-03 12:10:48', '2016-03-03 12:10:48'),
 (3, 'ServiceArticle', 3, '', '', '', '2016-03-03 12:12:49', '2016-03-03 12:12:49'),
 (4, 'ServiceInspiration', 4, '', '', '', '2016-03-03 12:20:55', '2016-03-03 12:20:55'),
-(5, 'ConsumerInspiration', 5, '', '', '', '2016-03-03 12:21:49', '2016-03-03 12:21:49');
+(5, 'ConsumerInspiration', 5, '', '', '', '2016-03-03 12:21:49', '2016-03-03 12:21:49'),
+(6, 'ConsumerProduct', 9, '', '', '', '2016-03-06 11:56:25', '2016-03-06 11:56:25');
 
 -- --------------------------------------------------------
 
@@ -393,7 +405,7 @@ CREATE TABLE `product` (
   `slug` varchar(255) DEFAULT NULL,
   `price` decimal(6,2) NOT NULL DEFAULT '0.00',
   `qty` smallint(6) NOT NULL DEFAULT '0',
-  `sold` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `sold` int(10) UNSIGNED DEFAULT '0',
   `brief` tinytext NOT NULL,
   `description` text NOT NULL,
   `body` text NOT NULL,
@@ -403,6 +415,21 @@ CREATE TABLE `product` (
   `created` timestamp NULL DEFAULT NULL,
   `updated` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `product`
+--
+
+INSERT INTO `product` (`id`, `category_id`, `target`, `code`, `title`, `slug`, `price`, `qty`, `sold`, `brief`, `description`, `body`, `featured`, `sort`, `status`, `created`, `updated`) VALUES
+(1, NULL, 1, '41564', 'klnjkl', NULL, '454.00', 4, 0, '56465', '6484', '<p>468484</p>\r\n', 1, 2, NULL, '2016-03-06 09:47:41', '2016-03-06 09:47:41'),
+(2, NULL, 2, '532', 'thyghbf', NULL, '223.00', 3, 0, 'hgfhfg', 'hgfdfg', '<p>hgfg</p>\r\n', 1, 3, NULL, '2016-03-06 09:49:31', '2016-03-06 09:49:31'),
+(3, NULL, 0, '5345', 'gfhdg', NULL, '23.00', 3, 3, 'htgfhf', 'hdg', '<p>hggf</p>\r\n', 1, 4, NULL, '2016-03-06 10:14:29', '2016-03-06 10:14:29'),
+(4, NULL, 0, '42', 'hgfhg', NULL, '45.00', 9, 9, 'uyfiuy', 'kghjg', '<p>kgjhk</p>\r\n', 1, 5, NULL, '2016-03-06 10:18:41', '2016-03-06 10:18:41'),
+(5, NULL, 2, '768325yh', 'fkjhejk', NULL, '78.00', 9, 0, 'ljikolui', 'iojuo', '<p>dgjkfhg</p>\r\n', 1, 6, NULL, '2016-03-06 10:24:16', '2016-03-06 10:24:16'),
+(6, NULL, 1, '9065ui', 'kjmlgnj', NULL, '8.00', 4, 0, 'hdfstr', 'gfdjfh', '<p>hgdytg</p>\r\n', 1, 7, NULL, '2016-03-06 10:25:05', '2016-03-06 10:25:05'),
+(7, 5, 2, '5435', 'htgyt6', 'htgyt6', '5.00', 5, NULL, 'hytrhbt', 'hggfhgf', '<p>hjgfhdty</p>\r\n', 1, 7, NULL, '2016-03-06 11:27:00', '2016-03-06 11:27:00'),
+(8, 6, 0, 'y8t74h', 'kljeklwj', 'kljeklwj', '34.00', 3, 0, 'twret', '', '', 0, 8, NULL, '2016-03-06 11:49:09', '2016-03-06 11:49:09'),
+(9, 6, 1, 't44t', 'frgrfdr', 'frgrfdr', '44.00', 43, 0, '', '', '', 0, 8, NULL, '2016-03-06 11:56:25', '2016-03-06 11:56:25');
 
 -- --------------------------------------------------------
 
@@ -607,7 +634,7 @@ ALTER TABLE `base_settings`
 -- AUTO_INCREMENT for table `base_tree`
 --
 ALTER TABLE `base_tree`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Unique tree node identifier';
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Unique tree node identifier', AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `base_user`
 --
@@ -627,7 +654,7 @@ ALTER TABLE `hits`
 -- AUTO_INCREMENT for table `meta_tags`
 --
 ALTER TABLE `meta_tags`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `order`
 --
@@ -642,7 +669,7 @@ ALTER TABLE `payment`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `translations_with_string`
 --
