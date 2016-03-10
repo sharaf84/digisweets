@@ -12,29 +12,48 @@ $test = 0;
 <!-- DOC: This is desktop version of the horizontal menu. The mobile version is defined(duplicated) sidebar menu below. So the horizontal menu has 2 seperate versions -->
 <div class="hor-menu hidden-sm hidden-xs">
     <ul class="nav navbar-nav">
-        <li>
-            <a href="<?= Url::to(['/categories']) ?>"> Categories </a>
+        <li class="classic-menu-dropdown">
+            <a data-toggle="dropdown" href="javascript:;">
+                Products <i class="fa fa-angle-down"></i>
+            </a>
+            <ul class="dropdown-menu pull-left">
+                <li <?= Yii::$app->user->can('Consumer') ? '' : 'style="display:none"}' ?> >
+                    <a href="<?= Url::to(['/consumer-products']) ?>"> Consumer Products </a>
+                </li>
+                <li <?= Yii::$app->user->can('Service') ? '' : 'style="display:none"' ?> >
+                    <a href="<?= Url::to(['/service-products']) ?>"> Service Products </a>
+                </li>
+                <li <?= Yii::$app->user->can('Asterisk') ? '' : 'style="display:none"' ?> >
+                    <a href="<?= Url::to(['/categories']) ?>"> Categories </a>
+                </li>
+            </ul>
         </li>
-
-            <li <?= Yii::$app->user->can('Consumer') ? '' : 'style="display:none"}' ?> >
-                <a href="<?= Url::to(['/consumer-products']) ?>"> Consumer Products </a>
-            </li>
-            <li <?= Yii::$app->user->can('Consumer') ? '' : 'style="display:none"}' ?> >
-                <a href="<?= Url::to(['/consumer-inspirations']) ?>"> Consumer Inspirations </a>
-            </li>
-            <li <?= Yii::$app->user->can('Consumer') ? '' : 'style="display:none"' ?> >
-                <a href="<?= Url::to(['/consumer-articles']) ?>"> Consumer Articles </a>
-            </li>
-            
-            <li <?= Yii::$app->user->can('Service') ? '' : 'style="display:none"' ?> >
-                <a href="<?= Url::to(['/service-products']) ?>"> Service Products </a>
-            </li>
-            <li <?= Yii::$app->user->can('Service') ? '' : 'style="display:none"' ?> >
-                <a href="<?= Url::to(['/service-inspirations']) ?>"> Service Inspirations </a>
-            </li>
-            <li <?= Yii::$app->user->can('Service') ? '' : 'style="display:none"' ?> >
-                <a href="<?= Url::to(['/service-articles']) ?>"> Service Articles </a>
-            </li>
+        <li class="classic-menu-dropdown">
+            <a data-toggle="dropdown" href="javascript:;">
+                Inspirations <i class="fa fa-angle-down"></i>
+            </a>
+            <ul class="dropdown-menu pull-left">
+                <li <?= Yii::$app->user->can('Consumer') ? '' : 'style="display:none"}' ?> >
+                    <a href="<?= Url::to(['/consumer-inspirations']) ?>"> Consumer Inspirations </a>
+                </li>
+                <li <?= Yii::$app->user->can('Service') ? '' : 'style="display:none"' ?> >
+                    <a href="<?= Url::to(['/service-inspirations']) ?>"> Service Inspirations </a>
+                </li>
+            </ul>
+        </li>
+        <li class="classic-menu-dropdown">
+            <a data-toggle="dropdown" href="javascript:;">
+                Articles <i class="fa fa-angle-down"></i>
+            </a>
+            <ul class="dropdown-menu pull-left">
+                <li <?= Yii::$app->user->can('Consumer') ? '' : 'style="display:none"}' ?> >
+                    <a href="<?= Url::to(['/consumer-articles']) ?>"> Consumer Articles </a>
+                </li>
+                <li <?= Yii::$app->user->can('Service') ? '' : 'style="display:none"' ?> >
+                    <a href="<?= Url::to(['/service-articles']) ?>"> Service Articles </a>
+                </li>
+            </ul>
+        </li>
         
         <li <?= Yii::$app->user->can('Asterisk') ? '' : 'style="display:none"' ?> >
             <a href="<?= Url::to(['/users']) ?>"> Users </a>
