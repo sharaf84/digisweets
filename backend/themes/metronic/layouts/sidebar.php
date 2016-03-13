@@ -16,75 +16,91 @@ use yii\helpers\Url;
                 <!-- END SIDEBAR TOGGLER BUTTON -->
             </li>
 
-            <li class="start <?= (in_array(Yii::$app->controller->id, ['categories', 'brands', 'sizes', 'flavors', 'products']) ) ? 'active open' : '' ?>">
+            <li class="start <?= (in_array(Yii::$app->controller->id, ['consumer-products', 'service-products', 'categories']) ) ? 'active open' : '' ?>">
                 <a href="javascript:;">
                     <i class="fa fa-database"></i>
-                    <span class="title">Store</span>
+                    <span class="title">Products</span>
                     <span class="selected"></span>
                     <span class="arrow open"></span>
                 </a>
 
                 <ul class="sub-menu">
-                    <li class="<?= (Yii::$app->controller->id == 'categories') ? 'active' : '' ?>">
-                        <a href="<?= Url::to(['/categories']) ?>"><i class="fa fa-glass"></i> Categories </a>
+                    <li class="<?= (Yii::$app->controller->id == 'consumer-products') ? 'active' : '' ?> <?= Yii::$app->user->can('Consumer') ? '' : 'style="display:none"}' ?> ">
+                        <a href="<?= Url::to(['/consumer-products']) ?>"> Consumer Products </a>
                     </li>
-                    <li class="<?= (Yii::$app->controller->id == 'brands') ? 'active' : '' ?>">
-                        <a href="<?= Url::to(['/brands']) ?>"><i class="fa fa-paw"></i> Brands </a>
+                    <li class="<?= (Yii::$app->controller->id == 'service-products') ? 'active' : '' ?> <?= Yii::$app->user->can('Service') ? '' : 'style="display:none"' ?> ">
+                        <a href="<?= Url::to(['/service-products']) ?>"> Service Products </a>
                     </li>
-                    <li class="<?= (Yii::$app->controller->id == 'sizes') ? 'active' : '' ?>">
-                        <a href="<?= Url::to(['/sizes']) ?>"><i class="fa fa-crop"></i> Sizes </a>
-                    </li>
-                    <li class="<?= (Yii::$app->controller->id == 'flavors') ? 'active' : '' ?>">
-                        <a href="<?= Url::to(['/flavors']) ?>"><i class="fa fa-cutlery"></i> Flavors </a>
-                    </li>
-                    <li class="<?= (Yii::$app->controller->id == 'products') ? 'active' : '' ?>">
-                        <a href="<?= Url::to(['/products']) ?>"><i class="fa fa-cubes"></i> Products </a>
+                    <li class="<?= (Yii::$app->controller->id == 'categories') ? 'active' : '' ?> <?= Yii::$app->user->can('Asterisk') ? '' : 'style="display:none"' ?> ">
+                        <a href="<?= Url::to(['/categories']) ?>"> Categories </a>
                     </li>
                 </ul>
             </li>
             
-            <li class="<?= (Yii::$app->controller->id == 'articles') ? 'active' : '' ?>">
-                <a href="<?= Url::to(['/articles']) ?>">
-                    <i class="fa fa-book"></i>
-                    <span class="title">Articles</span> 
+            <li class="start <?= (in_array(Yii::$app->controller->id, ['consumer-inspirations', 'service-inspirations']) ) ? 'active open' : '' ?>">
+                <a href="javascript:;">
+                    <i class="fa fa-database"></i>
+                    <span class="title">Inspirations</span>
+                    <span class="selected"></span>
+                    <span class="arrow open"></span>
                 </a>
-            </li>
 
-            <li class="<?= (Yii::$app->controller->id == 'users') ? 'active' : '' ?>">
+                <ul class="sub-menu">
+                    <li class="<?= (Yii::$app->controller->id == 'consumer-inspirations') ? 'active' : '' ?> <?= Yii::$app->user->can('Consumer') ? '' : 'style="display:none"}' ?> ">
+                        <a href="<?= Url::to(['/consumer-inspirations']) ?>"> Consumer Inspirations </a>
+                    </li>
+                    <li class="<?= (Yii::$app->controller->id == 'service-inspirations') ? 'active' : '' ?> <?= Yii::$app->user->can('Service') ? '' : 'style="display:none"' ?> ">
+                        <a href="<?= Url::to(['/service-inspirations']) ?>"> Service Inspirations </a>
+                    </li>
+                </ul>
+            </li>
+            
+            <li class="start <?= (in_array(Yii::$app->controller->id, ['consumer-articles', 'service-articles']) ) ? 'active open' : '' ?>">
+                <a href="javascript:;">
+                    <i class="fa fa-database"></i>
+                    <span class="title">Articles</span>
+                    <span class="selected"></span>
+                    <span class="arrow open"></span>
+                </a>
+
+                <ul class="sub-menu">
+                    <li class="<?= (Yii::$app->controller->id == 'consumer-articles') ? 'active' : '' ?> <?= Yii::$app->user->can('Consumer') ? '' : 'style="display:none"}' ?> ">
+                        <a href="<?= Url::to(['/consumer-articles']) ?>"> Consumer Articles </a>
+                    </li>
+                    <li class="<?= (Yii::$app->controller->id == 'service-products') ? 'active' : '' ?> <?= Yii::$app->user->can('Service') ? '' : 'style="display:none"' ?> ">
+                        <a href="<?= Url::to(['/service-articles']) ?>"> Service Articles </a>
+                    </li>
+                </ul>
+            </li>
+            
+            <li class="<?= (Yii::$app->controller->id == 'users') ? 'active' : '' ?> <?= Yii::$app->user->can('Asterisk') ? '' : 'style="display:none"' ?> ">
                 <a href="<?= Url::to(['/users']) ?>">
                     <i class="fa fa-user"></i>
                     <span class="title">Users</span> 
                 </a>
             </li>
             
-            <li class="last <?= (Yii::$app->controller->id == 'orders') ? 'active' : '' ?>">
+            <li class="last <?= (Yii::$app->controller->id == 'orders') ? 'active' : '' ?> <?= Yii::$app->user->can('Asterisk') ? '' : 'style="display:none"' ?> ">
                 <a href="<?= Url::to(['/orders']) ?>">
                     <i class="fa fa-shopping-cart"></i>
                     <span class="title">Orders</span> 
                 </a>
             </li>
-                        
-            <li class="<?= (Yii::$app->controller->id == 'pages') ? 'active' : '' ?>">
-                <a href="<?= Url::to(['/pages']) ?>">
-                    <i class="fa fa-pencil"></i>
-                    <span class="title">Pages</span> 
-                </a>
-            </li>
             
-            <li class="<?= (Yii::$app->controller->id == 'cities') ? 'active' : '' ?>">
-                <a href="<?= Url::to(['/cities']) ?>">
-                    <i class="fa fa-flag"></i>
-                    <span class="title">Cities</span> 
+            <li class="start <?= (in_array(Yii::$app->controller->id, ['consumer-products', 'service-products', 'categories']) ) ? 'active open' : '' ?>  <?= Yii::$app->user->can('Asterisk') ? '' : 'style="display:none"' ?> ">
+                <a href="javascript:;">
+                    <i class="fa fa-database"></i>
+                    <span class="title">Contents</span>
+                    <span class="selected"></span>
+                    <span class="arrow open"></span>
                 </a>
+
+                <ul class="sub-menu">
+                    <li class="<?= (Yii::$app->controller->id == 'pages') ? 'active' : '' ?> <?= Yii::$app->user->can('Consumer') ? '' : 'style="display:none"}' ?> ">
+                        <a href="<?= Url::to(['/pages']) ?>"> Pages </a>
+                    </li>
+                </ul>
             </li>
-            
-            <li class="<?= (Yii::$app->controller->id == 'comments') ? 'active' : '' ?>">
-                <a href="<?= Url::to(['/comments']) ?>">
-                    <i class="fa fa-comments"></i>
-                    <span class="title">Comments</span> 
-                </a>
-            </li>
-            
         </ul>
         <!-- END SIDEBAR MENU -->
     </div>
