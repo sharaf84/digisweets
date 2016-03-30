@@ -89,6 +89,7 @@ return [
                 //'<_m:[\w \-]+>/<_c:[\w \-]+>/<_a:[\w \-]+>' => '<_m>/<_c>/<_a>',
                 //'<_m:[\w \-]+>/<_c:[\w \-]+>/<_a:[\w \-]+>/<id:\d+>' => '<_m>/<_c>/<_a>',
                 //Sitemap rule
+                '<target:(consumer|food-service)>/<c:[\w \-]+>/<a:[\w \-]+>' => '<c>/<a>',
                 ['pattern' => 'sitemap', 'route' => 'sitemap/default/index', 'suffix' => '.xml'],
                 // custom rules
                 //'store' => 'store/search',
@@ -102,12 +103,10 @@ return [
                 'login' => 'user/login',
                 'logout' => 'user/logout',
                 'forgot-password' => 'user/request-password-reset',
-                '<_m:(consumer|food-service)>/<_c:[\w \-]+>/<_a:[\w \-]+>' => '<_m>/<_c>/<_a>',
-                '<_m:(consumer|food-service)>/<_c:[\w \-]+>/<_a:[\w \-]+>/<id:\d+>' => '<_m>/<_c>/<_a>',
                 '<slug:(history|quality-and-safety|export|product-categories)>' => 'site/page',
                 //'food-service/product/<slug:\S+>' => 'products/view',
                 //'food-service/products' => 'products/food-service',
-                'consumer/products' => 'products/consumer',
+                //'consumer/products' => 'products/consumer',
                 'contact-us' => 'site/contact-us',
             ],
         ],
