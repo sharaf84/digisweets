@@ -5,7 +5,7 @@ namespace frontend\controllers;
 use Yii;
 use yii\web\NotFoundHttpException;
 use common\models\custom\Product;
-use common\models\custom\Consumer;
+use common\models\custom\ConsumerProduct;
 use common\models\custom\ServiceProduct;
 
 /**
@@ -14,6 +14,7 @@ use common\models\custom\ServiceProduct;
 class ProductsController extends \frontend\components\BaseController {
   const FOOD = 2;
   const CONSUMER = 1;
+  const NEW = 1;
     /**
      * List all Products
      * @param string $slug
@@ -30,17 +31,17 @@ class ProductsController extends \frontend\components\BaseController {
     /**
      * List all Food Service Products
      */
-    public function actionFoodService($category_id){
+    public function actionFoodService($category_id, $category_name){
         $oProducts = ServiceProduct::find()->andWhere(['category_id' => $category_id])->with('firstMedia')->all();
-        return $this->render('food-service/index', ['oProducts' => $oProducts, 'category_id' => $category_id]);
+        return $this->render('food-service/index', ['oProducts' => $oProducts, 'category_id' => $category_id, 'category_name' => $category_name]);
     }
     
     /**
      * List all Consumer Products
      */
-    public function actionConsumer(){
-        $oProducts = ConsumerProduct::find()->with('firstMedia')->all();
-        return $this->render('consumer/index', ['oProducts' => $oProducts]);
+    public function actionConsumer($category_id, $category_name){
+        $oProducts = ConsumerProduct::find()->andWhere(['category_id' => $category_id])->with('firstMedia')->all();
+        return $this->render('consumer/index', ['oProducts' => $oProducts, 'category_id' => $category_id, 'category_name' => $category_name]);
     }
     
     public function actionView($slug){
@@ -55,46 +56,11 @@ class ProductsController extends \frontend\components\BaseController {
     }
     
     /**
-     * View Product
-     * @param string $slug
+     * List all New Products
      */
-    public function actionProductView($slug) {
-        $oProduct = Product::find()->parents()->andWhere(['slug' => $slug])->with('firstMedia', 'category', 'childs')->one();
-        if (!$oProduct)
-            throw new NotFoundHttpException(Yii::t('app', 'The requested page does not exist.'));
-        $oChildProduct = null;
-        $flavors = $colors = $colorsOptions = [];
-        $oProductForm = new ProductForm();
-        if ($oProductForm->load(Yii::$app->request->get()) && $oProductForm->validate()) {
-
-            $oProductQuery = Product::find()
-                    ->childs($oProduct->id)
-                    ->with('media')
-                    ->andWhere(['size_id' => $oProductForm->size]);
-
-            if ($oProductForm->flavor) {
-                $oChildProduct = $oProductQuery->andWhere(['flavor_id' => $oProductForm->flavor])->one();
-            } elseif ($oProductForm->color) {
-                $oChildProduct = $oProductQuery->andWhere(['color' => $oProductForm->color])->one();
-            }
-            if ($oProduct->isAccessory()) {
-                $colors = $oProduct->getChildsColors($oProductForm->size);
-                foreach (array_keys($colors) as $color)
-                    $colorsOptions[$color] = ['style' => "background:$color; color:$color;"];
-            } else {
-                $flavors = $oProduct->getChildsFlavors($oProductForm->size);
-            }
-        }
-        return $this->render('product', [
-                    'oProduct' => $oProduct,
-                    'oChildProduct' => $oChildProduct,
-                    'oProductForm' => $oProductForm,
-                    'sizes' => $oProduct->getChildsSizes(),
-                    'flavors' => $flavors,
-                    'colors' => $colors,
-                    'colorsOptions' => $colorsOptions,
-                    'relatedProducts' => $oProduct->getRelated(4)
-        ]);
+    public function actionNew(){
+        $oNewProducts = ServiceProduct::find()->where(['new' => self::NEW])->all();
+        
     }
 
 }

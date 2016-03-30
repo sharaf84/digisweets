@@ -16,9 +16,10 @@ $this->title = Yii::t('app', 'Categories');
 	<div class="inner-page">
             <div class="grid-wrap">
 		<ul class="grid swipe-down" id="grid">
+                    <li><a href="<?= Url::to(['products/new']) ?>"><img src="<?= Url::to('@frontThemeUrl') ?>/images/food/new-grid-1.jpg" alt="<?= Html::encode('new') ?>"><h3><?= Html::encode('new') ?></h3></a></li>
                     <?php
                         foreach($oCategories as $oCategory){ ?>
-                            <li><a href="<?= Url::to(['products/food-service', 'category_id' => $oCategory->id]); ?>"><img src="<?= $oCategory->getFeaturedImgUrl('categories') ?>" alt="<?= Html::encode($oCategory->name) ?>"><h3><?= Html::encode($oCategory->name) ?></h3></a></li>
+                            <li><a href="<?= Url::to(['products/food-service', 'category_id' => $oCategory->id, 'category_name' => $oCategory->name]) ?>"><img src="<?= $oCategory->getFeaturedImgUrl('categories') ?>" alt="<?= Html::encode($oCategory->name) ?>"><h3><?= Html::encode($oCategory->name) ?></h3></a></li>
                     <?php    }
                     ?>
 		</ul>

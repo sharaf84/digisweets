@@ -51,7 +51,7 @@ class Product extends \common\models\base\Base
             [['slug'], 'match', 'pattern' => static::SLUG_PATTERN],
             [['slug'], 'unique'],
             [['price', 'sold'], 'number'],
-            [['price', 'featured', 'qty'], 'default', 'value' => 0],
+            [['price', 'featured', 'qty', 'new'], 'default', 'value' => 0],
             [['brief', 'description', 'body', 'advantages', 'directions'], 'string'],
             [['code'], 'string', 'max' => 32],
             [['title', 'slug'], 'string', 'max' => 255],
