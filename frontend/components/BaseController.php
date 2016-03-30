@@ -27,5 +27,10 @@ class BaseController extends Controller {
         //Yii::$app->language = 'ar';
         Yii::$app->language = (isset(Yii::$app->params['mlConfig']['subdomains']['ar']) && Url::base(true) == Yii::$app->params['mlConfig']['subdomains']['ar']) ? 'ar' : 'en';
     }
+    
+    protected function setUser() {
+        //Yii::$app->language = 'ar';
+        Yii::$app->language = (isset(Yii::$app->params['mlConfig']['subdomains']['ar']) && Url::base(true) == Yii::$app->params['mlConfig']['subdomains']['ar']) ? 'ar' : 'en';
+    }
 
 }
