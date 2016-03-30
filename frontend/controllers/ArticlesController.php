@@ -3,7 +3,7 @@
 namespace frontend\controllers;
 
 use Yii;
-use common\models\custom\Article;
+use common\models\custom\ServiceArticle;
 use yii\web\NotFoundHttpException;
 
 /**
@@ -13,26 +13,16 @@ class ArticlesController extends \frontend\components\BaseController {
 
     public function actionIndex() {
 
-        $oArticlesDP = new \yii\data\ActiveDataProvider([
-            'query' => Article::find()->orderBy(['date' => SORT_DESC]),
-            'pagination' => [
-                'pageSize' => 7,
-            ],
-        ]);
-
-        return $this->render('index', [
-                    'oArticlesDP' => $oArticlesDP,
-                    'mostReadArticles' => Article::getMostRead(3),
-        ]);
+        $oServiceArticles = ServiceArticle::find()->with('firstMedia')->all();
+        return $this->render('index', ['oArticles' => $oServiceArticles]);
     }
 
     public function actionView($slug) {
-        $oArticle = Article::find()->andWhere(['slug' => $slug])->with('firstMedia')->one();
-        if(!$oArticle)
+        $oServiceArticle = ServiceArticle::find()->andWhere(['slug' => $slug])->with('firstMedia')->one();
+        if(!$oServiceArticle)
             throw new NotFoundHttpException(Yii::t('app', 'The requested page does not exist.'));
         return $this->render('view', [
-                    'oArticle' => $oArticle,
-                    'mostReadArticles' => Article::getMostRead(3),
+            'oArticle' => $oServiceArticle,
         ]);
     }
 

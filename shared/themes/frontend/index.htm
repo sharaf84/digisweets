@@ -1,0 +1,66 @@
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<style type="text/css">
+	body{margin: 0;padding: 0}
+		.homeBG {overflow: hidden; }
+		.home-content {position: absolute;top:0;left: 0;width: 100%;overflow: hidden;}
+		.top-part {position:absolute;top: 20px;right: 0;left: 0;margin: auto;text-align: center}
+		.mid-part {position:absolute;bottom:  ;right: 0;left: 0;margin: auto;text-align: center;z-index: 2}
+			.mid-part div {position: relative;display: inline}
+			.mid-part .chef-boy{left: }
+			.mid-part .slogn{left:0;right: 0;margin: auto}
+			.mid-part .chef-girl{top: 34px;right: }
+		.bottom-part {position: absolute;bottom:-20px;right: 0;left: 0;margin: auto;text-align: center;z-index: 2}
+			.bottom-part div {display: inline;position: absolute;}
+				.bottom-part .chefL {bottom:124px ;left: 0}
+				.bottom-part .tart-big {bottom:116px; right: 0;left: 0;}
+				.bottom-part .tart-small {bottom:110px }
+				.bottom-part .chefR {bottom:110px;right: 0 }
+
+		.cookTable {position: fixed;bottom: 0;width: 100%;}
+		.cover2 {position: fixed;bottom: 0;left: -124px;z-index: 1;}
+	</style>
+</head>
+<body>
+	<div class="homeBG">
+		<div class="bg"><img src="images/bg.jpg"></div>
+		
+	</div>
+		<div class="home-content">
+			<div class="top-part">
+				<div class="logo"><img src="images/logo.png"></div>
+			</div>
+			<div class="mid-part">
+				<div class="chef-boy"><img src="images/chefB.png"></div>
+				<div class="slogn"><img src="images/slogn.png"></div>
+				<div class="chef-girl"><img src="images/chefG.png"></div>
+			</div>
+			<div class="bottom-part">
+				<div class="chefL"><img src="images/chefL.png"></div>
+				<div class="tart-big"><img src="images/tartBig.png"></div>
+				<div class="tart-small"><img src="images/tartSmall.png"></div>
+				<div class="chefR"><img src="images/chefR.png"></div>
+			</div>
+			<div class="cookTable"><img src="images/table.png"></div>
+			<div class="cover2"><img src="images/cover2.png"></div>
+		</div>
+	<script type="text/javascript"  src="js/jquery-2.2.2.min.js"></script>
+	<script>
+	var	IH = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+	var	IW = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+	var mid_part = $('.mid-part').height();
+	var img = $('.bg img');
+	img.height(IH);
+	img.width(IW);
+	$('.home-content').height(IH);
+	$('.mid-part').css('bottom',170)
+
+
+	</script>
+</body>
+</html>

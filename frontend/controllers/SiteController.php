@@ -42,10 +42,10 @@ class SiteController extends \frontend\components\BaseController {
     public function actionHome() {
         //$this->view->params['homeSlider'] = Page::getHomeSlider();
         return $this->render('home', [
-                    'featuredProducts' => Product::getFeatured(3),
-                    'bestSellerProducts' => Product::getBestSeller(3),
-                    'homeBanner' => Page::getHomeBanner(),
-                    'latestArticles' => Article::getLatest(4)
+                    'featuredProducts' => 0,
+                    'bestSellerProducts' => 0,
+                    'homeBanner' => 0,
+                    'latestArticles' => 0
         ]);
     }
 

@@ -56,6 +56,14 @@ class ActionColumn extends \yii\grid\ActionColumn {
                 ]);
             };
         }
+        if(!isset($this->buttons['reciepe'])){
+            $this->buttons['reciepe'] = function ($url, $model, $key) {
+                return Html::a('<i class="fa fa-book"></i>', Url::toRoute(['reciepes/index','product_id' => $model->id, 'iframe' => true]), [
+                            'title' => Yii::t('yii', 'Reciepe'),
+                            'data-pjax' => '0',
+                ]);
+            };
+        }
     }
 
 }

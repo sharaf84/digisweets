@@ -13,7 +13,7 @@ use digi\metronic\widgets\ActiveForm;
 <div class="form-body">
     <h3 class="form-section">Note:  <small>fields marked with asterisk (*) are required.</small></h3>
 
-        <?= $form->field($model, 'category_id')->dropDownList(common\models\custom\Category::getList(), ['prompt' => 'Please Select']) ?>
+    <?= $form->field($model, 'category_id')->dropDownList(common\models\custom\Category::getList(), ['prompt' => 'Please Select']) ?>
 
     <?= $form->field($model, 'target')->hiddenInput(['value' => $model::TARGET])->label(false); ?>
 

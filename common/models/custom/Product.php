@@ -3,7 +3,7 @@
 namespace common\models\custom;
 
 use Yii;
-
+use common\models\custom\Reciepe;
 /**
  * This is the model class for table "product".
  *
@@ -13,6 +13,9 @@ use Yii;
  * @property string $code
  * @property string $title
  * @property string $slug
+ * @property string $advantages
+ * @property string $directions
+ * @property integer $new
  * @property string $price
  * @property integer $qty
  * @property integer $sold
@@ -43,13 +46,13 @@ class Product extends \common\models\base\Base
     {
         return [
             [['target'], 'default', 'value' => static::TARGET],
-            [['code', 'target', 'category_id', 'qty', 'price'], 'required'],
-            [['category_id', 'target', 'qty', 'featured', 'sort', 'status'], 'integer'],
+            [['code', 'target', 'category_id', 'qty', 'price', 'title'], 'required'],
+            [['category_id', 'target', 'qty', 'featured', 'sort', 'status', 'new'], 'integer'],
             [['slug'], 'match', 'pattern' => static::SLUG_PATTERN],
             [['slug'], 'unique'],
             [['price', 'sold'], 'number'],
             [['price', 'featured', 'qty'], 'default', 'value' => 0],
-            [['brief', 'description', 'body'], 'string'],
+            [['brief', 'description', 'body', 'advantages', 'directions'], 'string'],
             [['code'], 'string', 'max' => 32],
             [['title', 'slug'], 'string', 'max' => 255],
             [['created', 'updated'], 'safe']
@@ -68,6 +71,9 @@ class Product extends \common\models\base\Base
             'code' => Yii::t('app', 'Code'),
             'title' => Yii::t('app', 'Title'),
             'slug' => Yii::t('app', 'Slug'),
+            'advantages' => Yii::t('app', 'Advantages'),
+            'directions' => Yii::t('app', 'Directions'),
+            'new' => Yii::t('app', 'New'),
             'price' => Yii::t('app', 'Price'),
             'qty' => Yii::t('app', 'Qty'),
             'sold' => Yii::t('app', 'Sold'),
@@ -87,6 +93,14 @@ class Product extends \common\models\base\Base
      */
     public function getCategory() {
         return $this->hasOne(Category::className(), ['id' => 'category_id']);
+    }
+    
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getReciepe()
+    {
+        return $this->hasMany(Reciepe::className(), ['product_id' => 'id']);
     }
     
     public function behaviors() {

@@ -27,11 +27,39 @@ Dev.onReady = function () {
 };
 
 /**
+ * Initialize web text editor 'tinymce'.
+ * @author Dalia Atef (dahliaatef@hotmail.com)
+ * @todo Find more smart solution
+ */
+Dev.tinymceInit = function () {
+    tinymce.init({
+        selector: ".tinymce",
+        plugins: "code image anchor",
+        setup: function (editor) {
+            editor.on('change', function () {
+                tinymce.triggerSave();
+            });
+        }
+    });
+}
+
+/**
  * Re Initialize some components after ajax event.
  * @author Ahmed Sharaf (sharaf.developer@gmail.com)
  * @todo Find more smart solution
  */
 Dev.reInit = function () {
+    /**
+     * remove web text editor initialization, to avoid ajax conflicts
+     * @author Dalia Atef (dahliaatef@hotmail.com)
+     */
+    tinymce.remove();
+    /**
+     * reinit tinymce web text editor
+     * @author Dalia Atef (dahliaatef@hotmail.com)
+     */
+    Dev.tinymceInit();
+    
     /**
      * reinit colorbox items
      */
@@ -90,6 +118,7 @@ Dev.mainInit = function () {
     Layout.init(); // init layout
     QuickSidebar.init(); // init quick sidebar
     Demo.init(); // init demo features
+    Dev.tinymceInit(); // init web text editor
 };
 
 

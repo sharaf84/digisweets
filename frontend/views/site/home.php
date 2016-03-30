@@ -31,60 +31,60 @@ $this->title = Yii::t('app', 'TSS Home Page');
     </ul>
     <div class="tabs-content">
         <div id="featured-products" class="content row active">
-            <?php foreach ($featuredProducts as $oProduct){?>
+            <?php //foreach ($featuredProducts as $oProduct){?>
             <div class="large-4 medium-4 small-12 columns product-item">
-                <img src="<?= $oProduct->getFeaturedImgUrl('home-product') ?>" alt="">
-                <h4><?= Html::encode($oProduct->title) ?> - <span><?= Html::encode($oProduct->category->name) ?></span></h4>
-                <p><?= Html::encode($oProduct->brief) ?></p>
-                <a href="<?= $oProduct->getInnerUrl() ?>" class="shop-now"><i class="md md-shopping-cart"></i><?= Yii::t('app', 'Shop Now') ?></a>
+                <img src="<?//= $oProduct->getFeaturedImgUrl('home-product') ?>" alt="">
+                <h4><?//= Html::encode($oProduct->title) ?> - <span><?//= Html::encode($oProduct->category->name) ?></span></h4>
+                <p><?//= Html::encode($oProduct->brief) ?></p>
+                <a href="<?//= $oProduct->getInnerUrl() ?>" class="shop-now"><i class="md md-shopping-cart"></i><?//= Yii::t('app', 'Shop Now') ?></a>
             </div>
-            <?php }?>
+            <?php //}?>
         </div>
         <div id="best-seller" class="content row">
-            <?php foreach ($bestSellerProducts as $oProduct){?>
+            <?php //foreach ($bestSellerProducts as $oProduct){?>
             <div class="large-4 medium-4 small-12 columns product-item">
-                <img src="<?= $oProduct->getFeaturedImgUrl('home-product') ?>" alt="">
-                <h4><?= Html::encode($oProduct->title) ?> - <span><?= Html::encode($oProduct->category->name) ?></span></h4>
-                <p><?= Html::encode($oProduct->brief) ?></p>
-                <a href="<?= $oProduct->getInnerUrl() ?>" class="shop-now"><i class="md md-shopping-cart"></i><?= Yii::t('app', 'Shop Now') ?></a>
+                <img src="<?//= $oProduct->getFeaturedImgUrl('home-product') ?>" alt="">
+                <h4><?//= Html::encode($oProduct->title) ?> - <span><?//= Html::encode($oProduct->category->name) ?></span></h4>
+                <p><?//= Html::encode($oProduct->brief) ?></p>
+                <a href="<?//= $oProduct->getInnerUrl() ?>" class="shop-now"><i class="md md-shopping-cart"></i><?//= Yii::t('app', 'Shop Now') ?></a>
             </div>
-            <?php }?>
+            <?php //}?>
         </div>
     </div>
 </div>
 
-<?php if($homeBanner && $homeBanner->firstMedia){?>
-<a href="<?= $homeBanner->firstMedia->link ?>">
-<div class="dark-section" style="background-image:url('<?= $homeBanner->getFeaturedImgUrl('home-banner') ?>');">
+<?php //if($homeBanner && $homeBanner->firstMedia){?>
+<a href="<?//= $homeBanner->firstMedia->link ?>">
+<div class="dark-section" style="background-image:url('<?//= $homeBanner->getFeaturedImgUrl('home-banner') ?>');">
     <div class="row">
         <div class="large-6 medium-6 small-12 columns">
-            <h3><?= Html::encode($homeBanner->firstMedia->title) ?></h3>
-            <p><?= Html::encode($homeBanner->firstMedia->description) ?></p>
+            <h3><?//= Html::encode($homeBanner->firstMedia->title) ?></h3>
+            <p><?//= Html::encode($homeBanner->firstMedia->description) ?></p>
 			<!--
-            <a href="<?= $homeBanner->firstMedia->link ?>" class="shop-now" target="blanck"><i class="md md-shopping-cart"></i> <?= Yii::t('app', 'Shop Now') ?></a>
+            <a href="<?//= $homeBanner->firstMedia->link ?>" class="shop-now" target="blanck"><i class="md md-shopping-cart"></i> <?//= Yii::t('app', 'Shop Now') ?></a>
 			-->
         </div>
         <div class="large-6 medium-6 small-12 columns hide-for-small"></div>
     </div>
 </div>
 </a>
-<?php }?>
+<?php //}?>
 
-<?php if (!empty($latestArticles)) { ?>
+<?php //if (!empty($latestArticles)) { ?>
     <div class="article-section">
         <div class="row">
             <div class="large-3 medium-3 small-12 columns">
-                <img src="<?= $latestArticles[0]->getFeaturedImgUrl('home-article') ?>" alt="<?= Html::encode($latestArticles[0]->title) ?>">
+                <img src="<?//= $latestArticles[0]->getFeaturedImgUrl('home-article') ?>" alt="<?//= Html::encode($latestArticles[0]->title) ?>">
             </div>
             <div class="large-9 medium-9 small-12 columns">
-                <h4><?= Html::encode($latestArticles[0]->title) ?></h4>
-                <p><?= Html::encode($latestArticles[0]->brief) ?></p>
-                <a href="<?= $latestArticles[0]->getInnerUrl() ?>" class="shop-now"><?= Yii::t('app', 'Read More') ?></a>
+                <h4><?//= Html::encode($latestArticles[0]->title) ?></h4>
+                <p><?//= Html::encode($latestArticles[0]->brief) ?></p>
+                <a href="<?//= $latestArticles[0]->getInnerUrl() ?>" class="shop-now"><?//= Yii::t('app', 'Read More') ?></a>
             </div>
         </div>
     </div>
-    <?php array_shift($latestArticles);
+    <?php// array_shift($latestArticles);
 }
 ?>
 
-<?= $this->render('/articles/_bottomArticles', ['articles' => $latestArticles]) ?>
+<?//= $this->render('/articles/_bottomArticles', ['articles' => $latestArticles]) ?>

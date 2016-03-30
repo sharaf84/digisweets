@@ -33,6 +33,10 @@ class Category extends \common\models\base\Tree {
         ]);
     }
     
+    public function getChildren(){
+        
+    }
+    
     /**
      * @return \yii\db\ActiveQuery
      */

@@ -7,36 +7,33 @@ use yii\helpers\Url;
 
 $isHome = Yii::$app->controller->action->id == 'home';
 ?>
-<header class="<?php echo $isHome ? 'home-page' : 'staticHeader single-header'; ?>">
-    <!--.header-top-bar(data-magellan-expedition='fixed')-->
-    <div class="headerContainer" >
-        <div class="row headerBox">
-            <div class="large-2 medium-5 small-5 columns"><i class="md md-more-vert hide-for-large-up <?php echo Yii::$app->language == 'ar' ? 'right' : 'left'; ?> <?php echo Yii::$app->language == 'ar' ? 'right' : 'left'; ?>-off-canvas-toggle"></i><a href="/" class="logo"><img src="<?= Url::to('@frontThemeUrl') ?>/images/src/logo.png" alt="<?= Yii::t('app', 'TSS') ?>" /></a></div>
-            <div class="large-5 columns show-for-large-up">
-                <nav class="main-nav">
-                    <ul>
-                        <li><a href="<?= Url::home() ?>" class="<?= $isHome ? 'active' : '' ?>"><?= Yii::t('app', 'Home') ?></a></li>
-                        <li><span class="<?= (Yii::$app->controller->id == 'store' ) ? 'active' : '' ?>"  data-drop-down="#store-dropdown"><?= Yii::t('app', 'Store') ?></span></li>
-                        <li><span class="<?= (Yii::$app->controller->id == 'articles' ) ? 'active' : '' ?>" data-drop-down="#articles-dropdown"><?= Yii::t('app', 'Articles') ?></span></li>
+<?php Yii::$app->session->set('target', 'food-service'); ?>
+<header>
+    <div class="container">
+	<div class="inner-header">
+            <div class="logo"><img src="<?= Url::to('@frontThemeUrl') ?>/images/food/logo.png"></div>
+                <nav class="nav-menu">
+                    <ul class="menu-list">
+                            <li><a href="#">Home</a></li>
+                            <li class="sub-menu">
+				<a href="#" class="<?= ((Yii::$app->request->url == '/history') || (Yii::$app->request->url == '/quality-and-safety') || (Yii::$app->request->url == '/export')) ? 'active' : ''?>">About</a>
+				<ul>
+                                    <li><a href="<?= Url::to(['site/page', 'slug' => 'history']) ?>" class="<?= (Yii::$app->request->url == '/history') ? 'active' : ''?>">History</a></li>
+                                    <li><a href="<?= Url::to(['site/page', 'slug' => 'quality-and-safety']) ?>" class="<?= (Yii::$app->request->url == '/quality-and-safety') ? 'active' : ''?>">Quality And Safety</a></li>
+                                    <li><a href="<?= Url::to(['site/page', 'slug' => 'export']) ?>" class="<?= (Yii::$app->request->url == '/export') ? 'active' : ''?>">Export</a></li>
+				</ul>
+                            </li>
+                            <li><a href="<?= ((Yii::$app->session->get('target')) == 'food-service') ? Url::to(['categories/index']) : Url::to(['products/consumer']) ?>">Products</a></li>
+                            <li><a href="<?= Url::to(['inspirations/index']) ?>">Inspirations</a></li>
+                            <li><a href="<?= Url::to(['articles/index']) ?>">News & Updates</a></li>
+                            <li><a href="#">Contact Us</a></li>
                     </ul>
-                </nav>
-            </div>
-            
-            <?= $this->render('_headerSearchForm') ?>
-            
-            <?= Yii::$app->user->isGuest ? $this->render('_guestHeader') : $this->render('_memberHeader') ?>
-            
-            <?= $this->render('_articlesDropdown') ?>
-            
-            <?php include_once '_storeDropdown.php' ; // it has vars used at aside ?>
-            
+		</nav>
+		<div class="header-controls clearfix">
+                    <div class="shopping-cart active"><a href="cart.htm"><i class="shopping-count"><span>2</span></i></a></div>
+                    <div class="lang"><span>Ar</span></div>
+		</div>
+            <div class="mobile-menu"><i></i></div>	
         </div>
     </div>
-    <?= $isHome ? $this->render('_homeSlider') : '' ?>
-	<div id="mobile-login-form" class="hide">
-		<div class="smallLoginFormBox">
-			<!-- <a href="<?= Url::to(['/signup']) ?>" class="signup-btn"><?= Yii::t('app', 'Sign Up') ?></a> -->
-			<?php echo $this->render('/user/_mobileLoginForm', array('oLoginForm' => new \common\models\base\form\Login())); ?>
-		</div>
-	</div>
 </header>

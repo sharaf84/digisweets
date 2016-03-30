@@ -12,7 +12,7 @@ use yii\helpers\Html;
                 <img src="<?= Yii::$app->user->identity->getFeaturedImgUrl('default_avatar') ?>" alt="<?= Yii::$app->user->identity->getName() ?>">
             </div>
             <div class="mobile-user-name small-12 columns">
-                <h3><a href="<?= Url::to(['/profile']) ?>"><?= Yii::$app->user->identity->getName() ?></a></h3>
+                <h3><a href="<?//= Url::to(['/profile']) ?>"><?= Yii::$app->user->identity->getName() ?></a></h3>
             </div>
         <?php } else { ?>
             <div class="mobile-user-avatar small-12 columns">

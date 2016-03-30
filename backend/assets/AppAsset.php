@@ -21,6 +21,7 @@ class AppAsset extends AssetBundle {
     public $js = [
         'js/ui.js',
         'js/dev.js',
+        'plugins/tinymce/tinymce/tinymce.min.js',
     ];
 //    public $depends = [
 //        'digi\metronic\AdminAsset',

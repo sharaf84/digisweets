@@ -18,7 +18,7 @@ var Dev = Dev || {};
  */
 Dev.onReady = function () {
     Dev.mainInit();
-    Dev.globalEvents();
+    //Dev.globalEvents();
 };
 
 /**
@@ -80,7 +80,7 @@ Dev.globalEvents = function () {
  * @author Ahmed Sharaf (sharaf.developer@gmail.com)
  */
 Dev.reInit = function () {
-    TSS.initializeFoundation();
+    //TSS.initializeFoundation();
 };
 
 /**

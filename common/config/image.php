@@ -23,5 +23,11 @@ return [
     ],
     'sizes' => [
         'micro' => ['thumbnail', 50, 50],
+        'fitImgWidth' => ['fitWidth', 150],
+        'article' => ['thumbnail', 266, 254],
+        'article-inner' => ['thumbnail', 316, 301],
+        'product-inner' => ['thumbnail', 423, 427],
+        'categories' => ['thumbnail', 316, 427],
+        'inspiration-inner' => ['thumbnail', 847.5, 606],
     ]
 ];

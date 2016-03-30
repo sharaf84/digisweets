@@ -12,24 +12,27 @@ use yii\web\AssetBundle;
 
 class UIAsset extends AssetBundle {
 
-    public $sourcePath = '@frontThemePath';
-    //public $basePath = '@frontThemePath';
-    //public $baseUrl = '@frontThemeUrl';
+    //public $sourcePath = '@frontThemePath';
+    public $basePath = '@frontThemePath';
+    public $baseUrl = '@frontThemeUrl';
 
     public $css = [
-        'ui-deps/font-awesome/css/font-awesome.min.css',
-        'ui-deps/swiper/dist/css/swiper.min.css',
-        'ui-deps/animate.css/animate.min.css',
-        //'css/build/app.css',
+        'css/bootstrap.min.css',
+        'css/animate.css',
+        'css/style.css',
+        
     ];
 
     public $js = [
-        'ui-deps/modernizr/modernizr.js',
-        'ui-deps/foundation/js/foundation.min.js',
-        'ui-deps/swiper/dist/js/swiper.jquery.min.js',
-        'ui-deps/skrollr/dist/skrollr.min.js',
-        'ui-deps/jquery-number/jquery.number.min.js',
-        'js/build/app.js',
+        'js/modernizr.custom.js',
+        'js/jquery-2.2.2.min.js',
+        'js/masonry.pkgd.min.js',
+        'js/imagesloaded.pkgd.min.js',
+        'js/classie.js',
+        'js/colorfinder-1.1.js',
+        'js/gridScrollFx.js',
+        'js/test.js',
+        'js/main.js',
     ];
 
     public $depends = [
