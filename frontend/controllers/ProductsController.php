@@ -19,7 +19,6 @@ class ProductsController extends \frontend\components\BaseController {
      * @param string $slug
      */
     public function actionIndex(){
-        
         if((Yii::$app->session->get('target')) == 'food-service'){
             return $this->redirect('food-service');
         }elseif((Yii::$app->session->get('target')) == 'consumer'){
@@ -30,8 +29,8 @@ class ProductsController extends \frontend\components\BaseController {
     /**
      * List all Food Service Products
      */
-    public function actionFoodService($category_id){
-        $oProducts = ServiceProduct::find()->andWhere(['category_id' => $category_id])->with('firstMedia')->all();
+    public function actionFoodService($category_id = 10){
+        $oProducts = Product::find()->andWhere(['category_id' => $category_id])->with('firstMedia')->all();
         return $this->render('food-service/index', ['oProducts' => $oProducts, 'category_id' => $category_id]);
     }
     
