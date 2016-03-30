@@ -131,7 +131,7 @@ class Product extends \common\models\base\Base
     public static function find() {
         //Set default condition
         return (new query\Product(get_called_class()))
-                ->andWhere(static::TARGET ? ['target' => static::TARGET] : null)
-                ->andWhere(Yii::$app->session->has('target') ? ['target' => Yii::$app->session->get('target')] : null);
+                ->andWhere(static::TARGET ? ['target' => static::TARGET] : true)
+                ->andWhere(Yii::$app->session->has('target') ? ['target' => Yii::$app->session->get('target')] : true);
     }
 }

@@ -6,6 +6,7 @@ use yii\widgets\Pjax;
 use digi\metronic\grid\GridView;
 use digi\metronic\widgets\Breadcrumbs;
 
+
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\custom\search\Product */
 /* @var $dataProvider yii\data\ActiveDataProvider */

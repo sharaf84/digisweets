@@ -23,7 +23,7 @@ $this->title = Yii::t('app', 'News & Updates');
                         <div class="news-list-desc">
                             <span><?= $article->brief ?></span>
                         </div>
-                        <div class="news-list-more"><a href="<?= Url::to(['articles/view', 'slug' => $article->slug]) ?>">Read More <i class="glyphicon glyphicon-chevron-right"></i></a></div>
+                        <div class="news-list-more"><a href="<?= Url::to(['food-service/articles/view', 'slug' => $article->slug]) ?>">Read More <i class="glyphicon glyphicon-chevron-right"></i></a></div>
                     </div>
                 </div>
             <?php } ?>

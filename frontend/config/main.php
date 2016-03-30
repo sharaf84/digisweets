@@ -98,7 +98,7 @@ return [
                 //'category/<slug:\S+>' => 'store/search',
                 //'brand/<slug:\S+>' => 'store/search',
                 //'product/<slug:\S+>' => 'store/product',
-                'article/<slug:\S+>' => 'articles/view',
+                '<target:(consumer|food-service)>/article/<slug:\S+>' => 'articles/view',
                 'signup' => 'user/signup',
                 'login' => 'user/login',
                 'logout' => 'user/logout',
